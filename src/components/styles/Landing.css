@@ -1,0 +1,26 @@
+#furgrooveImage {
+  margin-top: 5rem;
+  width: 60%;
+  display: block;
+  margin-inline: auto;
+}
+
+h1,
+h2 {
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+#eventDate {
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+#eventLocation {
+  margin-top: -1rem;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-bottom: 5rem;
+}

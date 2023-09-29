@@ -1,0 +1,25 @@
+#Location {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 20rem;
+  padding-top: 10rem;
+}
+
+#location__venue {
+  width: 20rem;
+  margin-left: 7rem;
+}
+
+#location__address {
+  margin-top: -0.5rem;
+  opacity: 50%;
+  text-transform: uppercase;
+}
+
+#location__map {
+  height: 27rem;
+  width: 27rem;
+  background-color: var(--primary-clr);
+  margin-right: 5rem;
+  margin-top: 2.5rem;
+}

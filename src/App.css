@@ -1,0 +1,21 @@
+:root {
+  --dark-clr: #1d1527;
+  --primary-clr: #33283d;
+  --pink-clr: #e25691;
+  --blue-clr: #77f2da;
+  --yellow-clr: #eeae43;
+  --white-clr: #e8e4dd;
+
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white-clr);
+}
+
+body {
+  background-color: var(--dark-clr);
+  height: 100%;
+}
+
+main {
+  height: 500vh;
+}

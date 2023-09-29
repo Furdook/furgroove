@@ -1,0 +1,75 @@
+#DJs {
+  margin-top: 20rem;
+  padding-top: 10rem;
+}
+
+.dj {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dj__image {
+    position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    & img {
+        height: 27rem;
+        width: 27rem;
+        object-fit:cover;
+        border: 5px solid var(--blue-clr);
+    }
+}
+
+.dj__quote {
+    height: 200px;
+    width: 700px;
+    margin-top: 7rem;
+
+    & p {
+        width: 40ch;
+        line-height: 2rem;
+        padding: 2rem;
+        padding-left: 5rem;
+    }
+}
+
+.dj__name {
+    position: absolute;
+    height: 4.5rem;
+    left: 6rem;
+    bottom: -2rem;
+
+    & h1 {
+        position: relative;
+        color: var(--dark-clr);
+        font-size: 2rem;
+        padding: 1rem;
+        bottom: 2rem;
+    }
+}
+
+.beatbird > .dj__quote  {
+    background-color: var(--pink-clr);
+    margin-left: -5rem;
+}
+
+.beatbird > .dj__image >.dj__name {
+    background-color: var(--yellow-clr);
+    width: 250px;
+    
+}
+
+.yellowstreak > .dj__quote  {
+    background-color: var(--blue-clr);
+    color: var(--dark-clr);
+    margin-left: 5rem;
+}
+
+.yellowstreak > .dj__image {
+    margin-left: 7rem;
+    & .dj__name {
+        background-color: var(--pink-clr);
+        width: 350px;
+        margin-left: -3rem;
+    }
+}

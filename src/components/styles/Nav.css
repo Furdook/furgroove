@@ -1,0 +1,39 @@
+#navbar {
+  position: relative;
+  height: 100%;
+  position: sticky;
+  top: 0rem;
+  height: 65px;
+  z-index: 1000;
+}
+
+#navbar__list {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 4rem;
+  padding-top: 1rem;
+
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.navbar__list__item > a {
+  color: var(--white-clr);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--pink-clr);
+    text-decoration-thickness: 0.3rem;
+  }
+}
+
+hr {
+  opacity: 0;
+  width: calc(100% - 2rem);
+  margin-top: -0.8rem;
+  transition: opacity 0.1s ease-in-out;
+}

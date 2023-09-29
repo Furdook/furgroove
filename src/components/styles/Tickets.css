@@ -1,0 +1,43 @@
+#Tickets {
+  margin-top: 20rem;
+  padding: 10rem;
+}
+
+#Tickets h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#Tickets p,
+#Tickets h2,
+#Tickets h3 {
+  line-height: 3rem;
+  text-align: center;
+  margin: auto;
+}
+
+#Tickets h2 {
+  margin-top: -1rem;
+}
+
+#button__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+button {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--pink-clr);
+  border: 3px solid var(--yellow-clr);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white-clr);
+}
+
+.fade {
+  opacity: 50%;
+}
