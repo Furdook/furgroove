@@ -13,7 +13,7 @@ function App() {
     <>
       <Landing />
       <Nav />
-      <main>
+      <main id="mainContent">
         <Information />
         <Location />
         <Tickets /> 

@@ -4,7 +4,7 @@ import venue from "../assets/venue.png";
 function Location() {
   return (
     <section id="Location">
-      <div>
+      <div id="text__container">
         <p>
           The location for this edition is{" "}
           <strong className="pink">FORT33</strong>. A concert venue with a big
@@ -22,13 +22,15 @@ function Location() {
           <br />
           The whole location is wheelchair friendly.
         </p>
-        <img id="location__venue" src={venue} alt="" />
+      </div>
+      <div id="location__map"></div>
+      <div id="location__container">
+        <img id="location__venue-logo" src={venue} alt="" />
         <p id="location__address">
           Bavoortseweg 25 <br />
           3833 BM - Leusden, NL
         </p>
       </div>
-      <div id="location__map"></div>
     </section>
   );
 }

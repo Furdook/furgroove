@@ -1,75 +1,150 @@
-#DJs {
-  margin-top: 20rem;
-  padding-top: 10rem;
-}
-
 .dj {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .dj__image {
-    position: relative;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    & img {
-        height: 27rem;
-        width: 27rem;
-        object-fit:cover;
-        border: 5px solid var(--blue-clr);
-    }
+  position: relative;
+  margin-inline: 5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  & img {
+    height: 27rem;
+    width: 27rem;
+    object-fit: cover;
+  }
 }
 
 .dj__quote {
-    height: 200px;
-    width: 700px;
-    margin-top: 7rem;
+  height: 200px;
+  width: 700px;
+  margin-top: 7rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
-    & p {
-        width: 40ch;
-        line-height: 2rem;
-        padding: 2rem;
-        padding-left: 5rem;
-    }
+  & p {
+    width: 40ch;
+    line-height: 2rem;
+    padding: 2rem;
+    padding-left: 5rem;
+  }
 }
 
 .dj__name {
-    position: absolute;
-    height: 4.5rem;
-    left: 6rem;
-    bottom: -2rem;
+  position: absolute;
+  height: 4.5rem;
+  left: 6rem;
+  bottom: -2rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
-    & h1 {
-        position: relative;
-        color: var(--dark-clr);
-        font-size: 2rem;
-        padding: 1rem;
-        bottom: 2rem;
-    }
-}
-
-.beatbird > .dj__quote  {
-    background-color: var(--pink-clr);
-    margin-left: -5rem;
-}
-
-.beatbird > .dj__image >.dj__name {
-    background-color: var(--yellow-clr);
-    width: 250px;
-    
-}
-
-.yellowstreak > .dj__quote  {
-    background-color: var(--blue-clr);
+  & h1 {
+    position: relative;
     color: var(--dark-clr);
-    margin-left: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    bottom: 2rem;
+  }
+}
+
+.beatbird > .dj__image img {
+  border: 5px solid var(--blue-clr);
+}
+
+.beatbird > .dj__quote {
+  background-color: var(--pink-clr);
+  margin-right: 5rem;
+}
+
+.beatbird > .dj__image > .dj__name {
+  background-color: var(--yellow-clr);
+  width: 250px;
+}
+
+.yellowstreak > .dj__image img {
+  border: 5px solid var(--yellow-clr);
+}
+
+.yellowstreak > .dj__quote {
+  background-color: var(--blue-clr);
+  color: var(--dark-clr);
+  margin-left: 5rem;
 }
 
 .yellowstreak > .dj__image {
-    margin-left: 7rem;
-    & .dj__name {
-        background-color: var(--pink-clr);
-        width: 350px;
-        margin-left: -3rem;
+  & .dj__name {
+    background-color: var(--pink-clr);
+    width: 350px;
+    margin-left: -3rem;
+  }
+}
+
+.stripe > .dj__image img {
+  border: 5px solid var(--pink-clr);
+}
+
+.stripe > .dj__quote {
+  background-color: var(--yellow-clr);
+  color: var(--dark-clr);
+  margin-right: 5rem;
+}
+
+.stripe > .dj__image > .dj__name {
+  background-color: var(--blue-clr);
+  width: 250px;
+}
+
+.menos > .dj__image img {
+  border: 5px solid var(--blue-clr);
+}
+
+.menos > .dj__quote {
+  background-color: var(--pink-clr);
+  margin-left: 5rem;
+}
+
+.menos > .dj__image {
+  & .dj__name {
+    background-color: var(--yellow-clr);
+    width: 350px;
+    margin-left: -3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dj__image {
+    margin-inline: auto;
+  }
+  .dj__quote {
+    width: calc(27rem + 10px);
+
+    & p {
+      width: 35ch;
+      padding-left: 3rem;
     }
+  }
+
+  .beatbird > .dj__quote,
+  .stripe > .dj__quote {
+    margin: 5rem auto;
+    margin-bottom: 20rem;
+  }
+
+  .yellowstreak > .dj__quote,
+  .menos > .dj__quote {
+    position: relative;
+    margin-bottom: -45rem;
+    margin-inline: auto;
+  }
+
+  .beatbird > .dj__image,
+  .stripe > .dj__image {
+    margin-top: 11rem;
+  }
 }

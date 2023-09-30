@@ -1,25 +1,78 @@
 #Location {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: 20rem;
-  padding-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#location__venue {
+#text__container {
+  flex: 1 1 auto;
+  margin-left: 3rem;
+}
+
+#location__container {
+  position: relative;
+  bottom: 8rem;
+  left: 3rem;
+}
+
+#location__venue-logo {
   width: 20rem;
-  margin-left: 7rem;
+  margin-left: 1rem;
+  margin-top: -1rem;
 }
 
 #location__address {
-  margin-top: -0.5rem;
+  margin-top: -1.5rem;
   opacity: 50%;
   text-transform: uppercase;
 }
 
 #location__map {
-  height: 27rem;
-  width: 27rem;
+  position: relative;
+  flex: 0 0 500px;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  height: 500px;
   background-color: var(--primary-clr);
-  margin-right: 5rem;
-  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1230px) {
+  #Location {
+    flex-direction: column;
+  }
+
+  #text__container {
+    margin: auto;
+  }
+
+  #location__container {
+    bottom: -3rem;
+    margin: auto;
+  }
+
+  #location__map {
+    margin: auto;
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  #text__container {
+    margin-inline: 0.5rem;
+    width: auto;
+
+    & p {
+      width: auto;
+      padding-right: 2rem;
+      margin-right: 5rem;
+    }
+  }
+
+  #location__map {
+    margin: 0;
+    width: 100%;
+  }
+
+  #location__container {
+    margin-left: -2rem;
+  }
 }

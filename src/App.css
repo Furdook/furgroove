@@ -16,6 +16,37 @@ body {
   height: 100%;
 }
 
-main {
-  height: 500vh;
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+section {
+  padding-top: 10rem;
+}
+
+.pink {
+  color: var(--pink-clr);
+}
+
+.yellow {
+  color: var(--yellow-clr);
+}
+
+.blue {
+  color: var(--blue-clr);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding: 1rem;
+  width: 55ch;
+}
+
+h1 {
+  font-weight: 100;
 }

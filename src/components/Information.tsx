@@ -16,8 +16,8 @@ function Information() {
           All attendees get a badge with lanyard for attending the dance.We will also sell special t-shirts you can pre-order soon!</p>
         </div>
       </section>
-      <div id="info__shape"></div>
       <aside id="info__aside">
+        <div id="info__shape"></div>
         <h1 id="info__aside__time">START: <strong className="pink">20:00</strong></h1>
         <h1 className="blue">6 HOURS</h1>
       </aside>
