@@ -20,7 +20,7 @@ function DJs() {
           </p>
         </div>
       </section>
-      <section className="dj yellowstreak">
+      <section className="dj djem">
         <div className="dj__quote">
           <p>
             A German DJ famous from Summerbo.at and plenty of other German
@@ -30,7 +30,7 @@ function DJs() {
         <div className="dj__image">
           <img src={yellowstreak} alt="" />
           <div className="dj__name">
-            <h1>Yellowstreak</h1>
+            <h1>Djem</h1>
           </div>
         </div>
       </section>

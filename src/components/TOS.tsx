@@ -8,7 +8,7 @@ function TOS() {
    * Navigate to the previous page.
    */
   const goback = () => {
-    navigate("../testing")
+    navigate("../")
   };
 
   return (

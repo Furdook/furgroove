@@ -71,17 +71,17 @@
   }
 }
 
-.yellowstreak > .dj__image img {
+.djem > .dj__image img {
   border: 5px solid var(--yellow-clr);
 }
 
-.yellowstreak > .dj__quote {
+.djem > .dj__quote {
   background-color: var(--blue-clr);
   color: var(--dark-clr);
   margin-left: 5rem;
 }
 
-.yellowstreak > .dj__image {
+.djem > .dj__image {
   & .dj__name {
     background-color: var(--pink-clr);
     width: 350px;
@@ -151,7 +151,7 @@
     margin-bottom: 20rem;
   }
 
-  .yellowstreak > .dj__quote,
+  .djem > .dj__quote,
   .menos > .dj__quote {
     position: relative;
     margin-bottom: -45rem;
