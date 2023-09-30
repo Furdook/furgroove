@@ -28,6 +28,7 @@
     text-decoration: underline;
     text-decoration-color: var(--pink-clr);
     text-decoration-thickness: 0.3rem;
+    text-shadow: 0px 0px 5px var(--blue-clr);
   }
 }
 

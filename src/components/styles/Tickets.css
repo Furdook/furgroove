@@ -1,7 +1,3 @@
-#Tickets {
-
-}
-
 #Tickets h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -23,18 +19,6 @@
   display: flex;
   justify-content: center;
   margin-top: 5rem;
-}
-
-button {
-  position: relative;
-  width: 220px;
-  height: 50px;
-  border-radius: 20px;
-  background-color: var(--pink-clr);
-  border: 3px solid var(--yellow-clr);
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--white-clr);
 }
 
 .fade {

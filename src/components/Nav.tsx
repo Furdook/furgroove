@@ -27,7 +27,7 @@ function Nav() {
         {navItems.map((item) => {
           return (
             <li className="navbar__list__item" key={item}>
-              <a href={`#${item}`}>{item}</a>
+                <a href={`${item === "TOS" ? '/' : '#'}${item}`}>{item}</a>
             </li>
           );
         })}

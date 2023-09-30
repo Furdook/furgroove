@@ -65,6 +65,10 @@
 .beatbird > .dj__image > .dj__name {
   background-color: var(--yellow-clr);
   width: 250px;
+
+  @media screen and (max-width: 480px) {
+    margin-left: -1rem;
+  }
 }
 
 .yellowstreak > .dj__image img {
@@ -82,6 +86,10 @@
     background-color: var(--pink-clr);
     width: 350px;
     margin-left: -3rem;
+
+    @media screen and (max-width: 480px) {
+      margin-left: -4.5rem;
+    }
   }
 }
 
@@ -98,6 +106,10 @@
 .stripe > .dj__image > .dj__name {
   background-color: var(--blue-clr);
   width: 250px;
+
+  @media screen and (max-width: 480px) {
+    margin-left: -1.2rem;
+  }
 }
 
 .menos > .dj__image img {
@@ -112,8 +124,11 @@
 .menos > .dj__image {
   & .dj__name {
     background-color: var(--yellow-clr);
-    width: 350px;
-    margin-left: -3rem;
+    width: 250px;
+
+    @media screen and (max-width: 480px) {
+      margin-left: -1.1rem;
+    }
   }
 }
 
@@ -146,5 +161,17 @@
   .beatbird > .dj__image,
   .stripe > .dj__image {
     margin-top: 11rem;
+  }
+}
+
+@media  screen and (max-widt: 480px) {
+  .dj__quote {
+    width: auto;
+    margin-inline: 5px;
+  }
+
+  .dj__image img {
+    width: auto;
+    margin-inline: 5px;
   }
 }

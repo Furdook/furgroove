@@ -6,6 +6,7 @@ import Information from './components/Information'
 import Location from './components/Location'
 import Tickets from './components/Tickets'
 import DJs from './components/DJs'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Location />
         <Tickets /> 
         <DJs />
+        <Contact />
       </main>
     </>
   )

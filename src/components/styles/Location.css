@@ -76,3 +76,19 @@
     margin-left: -2rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #text__container {
+    margin-inline: 0.5rem;
+    width: auto;
+
+    & p {
+      width: 90vw;
+      margin-left: -1rem;
+    }
+  }
+
+  #location__map {
+    width: 95vw;
+  }
+}

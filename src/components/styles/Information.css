@@ -87,8 +87,11 @@
     width: 100%;
 
     & p {
-      margin-inline: 2rem;
+      margin-inline: 1rem;
       width: auto;
     }
+  }
+  #info__shape {
+    opacity: 0;
   }
 }
