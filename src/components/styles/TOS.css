@@ -10,12 +10,17 @@
     }
 
     & h2 {
+        margin-left: 2rem;
         text-align: left;
+    }
+
+    & p {
+        margin-inline: 1rem;
+        width: auto;
     }
 }
 
 #tos button {
-    position: fixed;
     left: 1rem;
     height: 40px;
     width: 140px;

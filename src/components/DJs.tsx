@@ -43,15 +43,14 @@ function DJs() {
         </div>
         <div className="dj__quote">
           <p>
-            The one and only Dutch DJ Bird! Living close to the venue so it's
-            almost like home.Loves to play all kinds of styles!
+            
           </p>
         </div>
       </section>
       <section className="dj menos">
         <div className="dj__quote">
           <p>
-            A gay af Dutch fur
+            
           </p>
         </div>
         <div className="dj__image">

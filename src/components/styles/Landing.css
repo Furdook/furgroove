@@ -23,3 +23,31 @@ h2 {
   font-weight: 200;
   margin-bottom: 5rem;
 }
+
+@media screen and (max-width: 840px) {
+  #image__container {
+    position: fixed;
+    top: 0rem;
+    align-items: center;
+    z-index: 10000;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  #furgrooveImage {
+    height: 60px;
+    width: 220px;
+  }
+
+  #eventDate {
+    margin-top: 40%;
+    z-index: 1;
+  }
+
+  #eventLocation {
+    margin-top: -1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 5rem;
+    z-index: 1;
+  }
+}

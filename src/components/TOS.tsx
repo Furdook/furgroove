@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./styles/TOS.css"
 
 function TOS() {
+  const navigate = useNavigate();
+
   const goback = () => {
-    window.history.back();
+    navigate("../testing")
   };
 
   return (

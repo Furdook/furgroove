@@ -2,15 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import TOS from "./components/TOS.tsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "tos/",
+    element: <TOS />,
+  },
+  {
+    path: "/",
+    element: <App/>,
+  },
+]);
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="testing/" element={<App />} />
-        <Route path="testing/tos" element={<TOS />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+      <RouterProvider router={router} />  
+  </React.StrictMode>,
+
 );

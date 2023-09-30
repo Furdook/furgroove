@@ -22,5 +22,6 @@
 }
 
 .fade {
+  width: 80%;
   opacity: 50%;
 }

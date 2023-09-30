@@ -1,12 +1,13 @@
 import "./styles/Contact.css"
 import logo from "../assets/logo.png"
 
-function Contact() {
+
+function Contact() {    
   return (
   <section id="Contact">
-    <button>Telegram Group Chat</button>
+    <button onClick={() => window.open("https://t.me/furgrooveinfo", "_blank")}>Telegram Group Chat</button>
     <br />
-    <button>Telegram Announcements</button>
+    <button onClick={() => window.open("https://t.me/furgroove", "_blank")}>Telegram Announcements</button>
     <img src={logo} alt="" />
   </section>
   );

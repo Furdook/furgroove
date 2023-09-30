@@ -1,9 +1,9 @@
 #navbar {
-  position: relative;
   height: 100%;
   position: sticky;
   top: 0rem;
   height: 65px;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -37,4 +37,40 @@ hr {
   width: calc(100% - 2rem);
   margin-top: -0.8rem;
   transition: opacity 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 940px) {
+  #navbar__list {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #navbar {
+    position: fixed;
+
+    & #navbar__list {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+  }
+}
+
+#navButton {
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  height: 100px;
+  width: 100px;
+
+  & img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.navOpened {
+  background-color: var(--dark-clr);
+  margin-top: -10px;
 }
