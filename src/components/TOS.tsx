@@ -4,6 +4,9 @@ import "./styles/TOS.css"
 function TOS() {
   const navigate = useNavigate();
 
+  /**
+   * Navigate to the previous page.
+   */
   const goback = () => {
     navigate("../testing")
   };

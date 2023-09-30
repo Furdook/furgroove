@@ -11,6 +11,9 @@ function Nav() {
 
   const navigate = useNavigate();
 
+  /**
+   * Navigate to the TOS page.
+   */
   const navigateTOS = () => {
     navigate("TOS");
   };

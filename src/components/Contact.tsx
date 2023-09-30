@@ -5,9 +5,9 @@ import logo from "../assets/logo.png"
 function Contact() {    
   return (
   <section id="Contact">
-    <button onClick={() => window.open("https://t.me/furgrooveinfo", "_blank")}>Telegram Group Chat</button>
+    <button onClick={() => window.open("https://t.me/furgroove", "_blank")}>Telegram Group Chat</button>
     <br />
-    <button onClick={() => window.open("https://t.me/furgroove", "_blank")}>Telegram Announcements</button>
+    <button onClick={() => window.open("https://t.me/furgrooveinfo", "_blank")}>Telegram Announcements</button>
     <img src={logo} alt="" />
   </section>
   );

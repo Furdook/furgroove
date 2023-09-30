@@ -10,7 +10,7 @@ function Tickets() {
       <h2>20€</h2>
       <p className="fade">*prices include a 2.5€ service fee</p>
       <div id="button__container">
-        <button>TICKETS</button>
+        <button onClick={() => window.open("https://fort33.stager.co/web/tickets/111327623", "_blank")}>TICKETS</button>
       </div>
       <p className="fade">*external site</p>
     </section>
