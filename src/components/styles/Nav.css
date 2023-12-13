@@ -15,7 +15,6 @@
   padding: 0;
   gap: 4rem;
   margin-top: 4rem;
-
   font-size: 1.7rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -24,6 +23,8 @@
 .navbar__list__item > a {
   color: var(--white-clr);
   text-decoration: none;
+  position: relative;
+  top: 15px;
 
   &:hover {
     text-decoration: underline;
@@ -34,6 +35,8 @@
 }
 
 hr {
+  position: relative;
+  top: 15px;
   opacity: 0;
   width: calc(100% - 2rem);
   margin-top: -0.8rem;
