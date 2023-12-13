@@ -1,13 +1,10 @@
-import { useEffect, useState } from "react";
-import burger from "../assets/burger.svg";
-import x from "../assets/x.svg";
+import { useEffect, useLayoutEffect, useState } from "react";
 import "./styles/Nav.css";
 import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];
-  const [navReady, setNavReady] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
+  const [navReady, setNavReady] = useState(window.innerWidth < 840);
 
   const navigate = useNavigate();
 
@@ -35,96 +32,79 @@ function Nav() {
     }
   };
 
-  /**
-   * Check if the user has resized the window.
-   * If the window is less than 841px wide, set the navbar ready to be opened.
-   */
-  onresize = () => {
+  window.addEventListener("resize", () => {
     if (window.innerWidth < 841) setNavReady(true);
     else setNavReady(false);
-  };
 
-  /**
-   * Sets the display of the navbar to the value passed.
-   *
-   * @param value The value to set the display of the navbar to.
-   */
-  const listSet = (value: string) => {
+    setNav();
+  });
+
+  const setNav = () => {
     const list = document.getElementById("navbar__list")!;
-    list.setAttribute("style", `display: ${value};`);
-  };
-
-  /**
-   * Sets the display of the button to the value passed.
-   *
-   * @param value The value to set the display of the button to.
-   */
-  const buttonSet = (value: string) => {
-    const button = document.getElementById("navButton")!;
-    button.setAttribute("style", `display: ${value};`);
-  };
-
-  /**
-   * Opens and closes the navbar.
-   */
-  const openNav = () => {
-    if (navReady) {
-      const button = document.getElementById("navButton")!;
-      const nav = document.getElementById("navbar__list")!;
-
-      if (!navOpen) {
-        setNavOpen(true);
-        nav.classList.add("navOpened");
-        button.innerHTML = `<img src=${x} alt="" />`;
-        listSet("flex");
-      } else {
-        setNavOpen(false);
-        nav.classList.remove("navOpened");
-        button.innerHTML = `<img src=${burger} alt="" />`;
-        listSet("none");
-      }
+    if (window.innerWidth > 840) {
+      list.setAttribute("style", "transform: translateX(0);");
+    } else {
+      list.setAttribute("style", "transform: translateX(-100%);");
     }
   };
 
-  /**
-   * If the navbar is ready, set the display of the button to 'flex'
-   * and the display of the list to 'none'.
-   */
+  const renderBurger = () => {
+    return (
+      <label htmlFor="burger__input">
+        <input id="burger__input" type="checkbox" />
+        <div id="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </label>
+    );
+  };
+
   useEffect(() => {
     if (navReady) {
-      buttonSet("flex");
-      listSet("none");
-    } else {
-      buttonSet("none");
-      listSet("flex");
+      const input = document.getElementById("burger__input")!;
+      const list = document.getElementById("navbar__list")!;
 
-      setNavOpen(false);
-      document.getElementById(
-        "navButton"
-      )!.innerHTML = `<img src=${burger} alt="" />`;
+      input.addEventListener("change", () => {
+        const input = document.getElementById(
+          "burger__input"
+        ) as HTMLInputElement;
+
+        if (input.checked) {
+          list.setAttribute("style", "transform: translateX(0);");
+        } else {
+          list.setAttribute("style", "transform: translateX(-100%);");
+        }
+      });
     }
-    document.getElementById("navbar__list")!.classList.toggle("closed");
   }, [navReady]);
 
-  /**
-   * Set the navbar ready to be opened if pages loads at less than 841px wide.
-   */
-  useEffect(() => {
-    setNavReady(window.innerWidth < 840);
-  }, []);
+  useLayoutEffect(() => {
+    setNav();
+  });
 
   return (
     <nav id="navbar">
-      <div id="navButton" onClick={openNav}>
-        <img src={burger} alt="" />
-      </div>
+      <div id="navButton">{navReady ? renderBurger() : null}</div>
       <ul id="navbar__list">
         {navItems.map((item) => {
           return (
             <li className="navbar__list__item" key={item}>
               <a
                 href={`${item === "TOS" ? "#" : `#${item}`}`}
-                onClick={item === "TOS" ? navigateTOS : openNav}
+                onClick={() => {
+                  const input = document.getElementById(
+                    "burger__input"
+                  )! as HTMLInputElement;
+                  if (input) {
+                    input.checked = false;
+                  }
+                  if (item === "TOS") {
+                    navigateTOS();
+                  }
+                }}
               >
                 {item}
               </a>

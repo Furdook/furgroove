@@ -1,7 +1,9 @@
 import "./styles/DJs.css";
 
 import beatbird from "../assets/beatbird.jpg";
-import yellowstreak from "../assets/yellowstreak.jpg";
+import djem from "../assets/djem.jpg";
+import stripe from "../assets/stripe.jpg";
+import menos from "../assets/menos.png";
 
 function DJs() {
   return (
@@ -13,22 +15,19 @@ function DJs() {
             <h1>Beatbird</h1>
           </div>
         </div>
-        <div className="dj__quote">
-          <p>
-            The one and only Dutch DJ Bird! Living close to the venue so it's
-            almost like home.Loves to play all kinds of styles!
-          </p>
-        </div>
+        <p className="dj__quote">
+          The one and only Dutch DJ Bird! Living close to the venue so it's
+          almost like home. Loves to play all kinds of styles!
+        </p>
       </section>
       <section className="dj djem">
-        <div className="dj__quote">
-          <p>
-            A German DJ famous from Summerbo.at and plenty of other German
-            Furdances!
-          </p>
-        </div>
+        <p className="dj__quote">
+          If you have ever been at a big furry convention you would have heard
+          the beats of our French DJ Djem. He loves to play harder styles and
+          will definitly let you move to sound of his beats.
+        </p>
         <div className="dj__image">
-          <img src={yellowstreak} alt="" />
+          <img src={djem} alt="" />
           <div className="dj__name">
             <h1>Djem</h1>
           </div>
@@ -36,25 +35,25 @@ function DJs() {
       </section>
       <section className="dj stripe">
         <div className="dj__image">
-          <img src={beatbird} alt="" />
+          <img src={stripe} alt="" />
           <div className="dj__name">
             <h1>Stripe</h1>
           </div>
         </div>
-        <div className="dj__quote">
-          <p>
-            
-          </p>
-        </div>
+        <p className="dj__quote">
+          The Mash-up king of Germany! He is the only one that can mix schlagers
+          with baby shark and still make it sound good. Famous for the Dead Dog
+          Parties at Eurofurence and Cologne FurDance.
+        </p>
       </section>
       <section className="dj menos">
-        <div className="dj__quote">
-          <p>
-            
-          </p>
-        </div>
+        <p className="dj__quote">
+          One of our Dutch DJ's that will end the evening with one mission; Make
+          everyone like hardstyle! Get ready for some bangers, sing-a-longs and
+          a bass that will blow you away.
+        </p>
         <div className="dj__image">
-          <img src={yellowstreak} alt="" />
+          <img src={menos} alt="" />
           <div className="dj__name">
             <h1>Menos</h1>
           </div>
