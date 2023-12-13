@@ -1,23 +1,35 @@
 #DJs {
   padding-top: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .dj {
   display: flex;
   flex-direction: row;
 
+  /* on small screens change to column view and change order of quote and image for every toher artist */
   @media screen and (max-width: 1200px) {
     flex-direction: column;
-  }
 
-  &:first-child {
-    padding-top: 0rem;
+    .dj__image {
+      margin-inline: auto;
+      order: 1;
+    }
+
+    .dj__quote {
+      order: 2;
+      margin-inline: auto;
+    }
   }
 }
 
 .dj__image {
   position: relative;
+  display: flex;
+  justify-content: center;
   margin-inline: 5rem;
+
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
   & img {
@@ -29,148 +41,57 @@
 }
 
 .dj__quote {
-  max-width: 700px;
-  margin-top: 7rem;
-  margin-bottom: auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--_quote_clr);
+  color: var(--dark-clr);
+
+  padding: 2rem;
+  margin-block: 7rem auto;
+
   width: 40ch;
+  max-width: 700px;
   word-wrap: break-word;
   line-height: 2rem;
-  padding: 2rem;
-  background-color: var(--_quote_clr);
 }
 
 .dj__name {
   position: absolute;
-  height: 4.5rem;
-  left: 6rem;
-  bottom: -2rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  bottom: -4rem;
+  left: auto;
 
-  & h1 {
-    position: relative;
-    color: var(--dark-clr);
-    font-size: 2rem;
-    padding: 1rem;
-    bottom: 2rem;
-  }
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--_name-clr);
+  color: var(--dark-clr);
+
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  width: auto;
 }
 
+/* custom colours for each artist */
 .menos,
 .beatbird {
   --_border_clr: var(--blue-clr);
   --_quote_clr: var(--pink-clr);
+  --_name-clr: var(--yellow-clr);
 }
 
 .stripe {
   --_border_clr: var(--pink-clr);
   --_quote_clr: var(--yellow-clr);
+  --_name-clr: var(--blue-clr);
 }
 
 .djem {
   --_border_clr: var(--yellow-clr);
   --_quote_clr: var(--blue-clr);
+  --_name-clr: var(--pink-clr);
 }
 
-.beatbird > .dj__quote {
-  margin-right: 5rem;
-}
-
-.beatbird > .dj__image > .dj__name {
-  background-color: var(--yellow-clr);
-  width: 250px;
-
-  @media screen and (max-width: 480px) {
-    margin-left: -1rem;
-  }
-}
-
-.djem > .dj__quote {
-  color: var(--dark-clr);
-  margin-left: 5rem;
-}
-
-.djem > .dj__image {
-  & .dj__name {
-    background-color: var(--pink-clr);
-    width: 350px;
-    margin-left: -3rem;
-
-    @media screen and (max-width: 480px) {
-      margin-left: -4.5rem;
-    }
-  }
-}
-
-.stripe > .dj__quote {
-  color: var(--dark-clr);
-  margin-right: 5rem;
-}
-
-.stripe > .dj__image > .dj__name {
-  background-color: var(--blue-clr);
-  width: 250px;
-
-  @media screen and (max-width: 480px) {
-    margin-left: -1.2rem;
-  }
-}
-
-.menos > .dj__quote {
-  margin-left: 5rem;
-}
-
-.menos > .dj__image {
-  & .dj__name {
-    background-color: var(--yellow-clr);
-    width: 250px;
-
-    @media screen and (max-width: 480px) {
-      margin-left: -1.1rem;
-    }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .dj__image {
-    margin-inline: auto;
-  }
-  .dj__quote {
-    width: calc(27rem + 10px);
-
-    & p {
-      width: 35ch;
-      padding-left: 3rem;
-    }
-  }
-
-  .beatbird > .dj__quote,
-  .stripe > .dj__quote {
-    margin: 5rem auto;
-    margin-bottom: 20rem;
-  }
-
-  .djem > .dj__quote,
-  .menos > .dj__quote {
-    position: relative;
-    margin-bottom: -45rem;
-    margin-inline: auto;
-  }
-
-  .beatbird > .dj__image,
-  .stripe > .dj__image {
-    margin-top: 11rem;
-  }
-}
-
-@media screen and (max-widt: 480px) {
-  .dj__quote {
-    width: auto;
-    margin-inline: 5px;
-  }
-
-  .dj__image img {
-    width: auto;
-    margin-inline: 5px;
+/* correct positioning on fullscreen view */
+.menos,
+.djem {
+  @media screen and (min-width: 1200px) {
+    margin-left: 5rem;
   }
 }

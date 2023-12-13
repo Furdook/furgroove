@@ -1,5 +1,6 @@
 import "./styles/Location.css";
 import venue from "../assets/venue.png";
+import map from "../assets/map.png";
 
 function Location() {
   return (
@@ -23,7 +24,7 @@ function Location() {
           The whole location is wheelchair friendly.
         </p>
       </div>
-      <div id="location__map"></div>
+      <img id="location__map" src={map} />
       <div id="location__container">
         <img id="location__venue-logo" src={venue} alt="" />
         <p id="location__address">

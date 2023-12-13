@@ -11,9 +11,7 @@ function DJs() {
       <section className="dj beatbird">
         <div className="dj__image">
           <img src={beatbird} alt="" />
-          <div className="dj__name">
-            <h1>Beatbird</h1>
-          </div>
+          <h1 className="dj__name">Beatbird</h1>
         </div>
         <p className="dj__quote">
           The one and only Dutch DJ Bird! Living close to the venue so it's
@@ -28,17 +26,13 @@ function DJs() {
         </p>
         <div className="dj__image">
           <img src={djem} alt="" />
-          <div className="dj__name">
-            <h1>Djem</h1>
-          </div>
+          <h1 className="dj__name">Djem</h1>
         </div>
       </section>
       <section className="dj stripe">
         <div className="dj__image">
           <img src={stripe} alt="" />
-          <div className="dj__name">
-            <h1>Stripe</h1>
-          </div>
+          <h1 className="dj__name">Stripe</h1>
         </div>
         <p className="dj__quote">
           The Mash-up king of Germany! He is the only one that can mix schlagers
@@ -54,9 +48,7 @@ function DJs() {
         </p>
         <div className="dj__image">
           <img src={menos} alt="" />
-          <div className="dj__name">
-            <h1>Menos</h1>
-          </div>
+          <h1 className="dj__name">Menos</h1>
         </div>
       </section>
     </section>
