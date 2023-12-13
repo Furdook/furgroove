@@ -8,13 +8,16 @@
 }
 
 #navbar__list {
-  transition: transform 0.1s ease-in-out;
-  justify-content: center;
-  list-style: none;
+  transition: transform 100ms ease;
+
   display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+
   padding: 0;
-  gap: 4rem;
   margin-top: 4rem;
+
+  list-style: none;
   font-size: 1.7rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -24,7 +27,7 @@
   color: var(--white-clr);
   text-decoration: none;
   position: relative;
-  top: 15px;
+  top: 1rem;
 
   &:hover {
     text-decoration: underline;
@@ -36,17 +39,11 @@
 
 hr {
   position: relative;
-  top: 15px;
+  top: 1rem;
   opacity: 0;
   width: calc(100% - 2rem);
   margin-top: -0.8rem;
   transition: opacity 0.1s ease-in-out;
-}
-
-@media screen and (max-width: 940px) {
-  #navbar__list {
-    gap: 2rem;
-  }
 }
 
 @media screen and (max-width: 840px) {
@@ -54,7 +51,6 @@ hr {
     position: fixed;
 
     & #navbar__list {
-      z-index: 1;
       background-color: var(--dark-clr);
       display: flex;
       flex-direction: column;
@@ -64,19 +60,7 @@ hr {
   }
 }
 
-#navButton {
-  position: fixed;
-  top: 0;
-  left: 1rem;
-  height: 100px;
-  width: 100px;
-
-  & img {
-    height: 60px;
-    width: 60px;
-  }
-}
-
+/* pre-made burger button by me */
 #burger__input {
   display: none;
 }

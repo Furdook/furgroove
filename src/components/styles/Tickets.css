@@ -3,16 +3,17 @@
   font-weight: 700;
 }
 
-#Tickets p,
-#Tickets h2,
-#Tickets h3 {
-  line-height: 3rem;
-  text-align: center;
-  margin: auto;
-}
-
-#Tickets h2 {
-  margin-top: -1rem;
+#Tickets {
+  & p,
+  h2,
+  h3 {
+    line-height: 3rem;
+    text-align: center;
+    margin: auto;
+  }
+  h2 {
+    margin-top: -1rem;
+  }
 }
 
 #button__container {

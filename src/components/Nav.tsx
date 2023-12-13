@@ -87,7 +87,7 @@ function Nav() {
 
   return (
     <nav id="navbar">
-      <div id="navButton">{navReady ? renderBurger() : null}</div>
+      {navReady ? renderBurger() : null}
       <ul id="navbar__list">
         {navItems.map((item) => {
           return (

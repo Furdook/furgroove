@@ -55,14 +55,17 @@ h1 {
 
 button {
   position: relative;
+  color: var(--white-clr);
+  background-color: var(--pink-clr);
+
   width: 220px;
   height: 50px;
+
   border-radius: 20px;
-  background-color: var(--pink-clr);
   border: 3px solid var(--yellow-clr);
+
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--white-clr);
 
   &:hover {
     cursor: pointer;
