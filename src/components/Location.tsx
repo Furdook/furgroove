@@ -1,6 +1,6 @@
 import "./styles/Location.css";
 import venue from "../assets/venue.png";
-import map from "../assets/map.png";
+import map from "../assets/map.webp";
 
 function Location() {
   return (
@@ -24,9 +24,9 @@ function Location() {
           The whole location is wheelchair friendly.
         </p>
       </div>
-      <img id="location__map" src={map} />
+      <img id="location__map" src={map} alt="Map of venue location" />
       <div id="location__container">
-        <img id="location__venue-logo" src={venue} alt="" />
+        <img id="location__venue-logo" src={venue} alt="Fort33 Logo" />
         <p id="location__address">
           Bavoortseweg 25 <br />
           3833 BM - Leusden, NL

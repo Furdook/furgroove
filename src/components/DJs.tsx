@@ -1,9 +1,9 @@
 import "./styles/DJs.css";
 
-import beatbird from "../assets/beatbird.jpg";
-import djem from "../assets/djem.jpg";
-import stripe from "../assets/stripe.jpg";
-import menos from "../assets/menos.png";
+import beatbird from "../assets/beatbird.webp";
+import djem from "../assets/djem.webp";
+import stripe from "../assets/stripe.webp";
+import menos from "../assets/menos.webp";
 
 function DJs() {
   return (
