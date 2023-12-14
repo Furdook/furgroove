@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./styles/TOS.css"
+import "./styles/TOS.css";
 
 function TOS() {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ function TOS() {
    * Navigate to the previous page.
    */
   const goback = () => {
-    navigate("../")
+    navigate("../");
   };
 
   return (
@@ -102,5 +102,5 @@ function TOS() {
     </main>
   );
 }
-
+// eslint-disable-next-line
 export default TOS;
