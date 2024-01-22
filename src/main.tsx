@@ -4,21 +4,31 @@ import App from "./App.tsx";
 import TOS from "./components/TOS.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// archived pages:
+import Jan_2024 from "./archive/2024.01.tsx";
+import { TOS as TOS_2024 } from "./archive/2024.01.tsx";
+
 const router = createBrowserRouter([
+  {
+    path: "archive/january/",
+    element: <Jan_2024 />,
+  },
+  {
+    path: "archive/january/tos/",
+    element: <TOS_2024 />,
+  },
   {
     path: "tos/",
     element: <TOS />,
   },
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
 ]);
 
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-      <RouterProvider router={router} />  
-  </React.StrictMode>,
-
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

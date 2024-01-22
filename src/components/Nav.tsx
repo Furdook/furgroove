@@ -20,6 +20,7 @@ function Nav() {
    * If they have make navbar opaque, and make 'hr' visible.
    */
   onscroll = () => {
+    if (window.location.pathname.includes("TOS")) return;
     const underscore = document.getElementById("navbar__underscore")!;
     const navbar = document.getElementById("navbar")!;
 
@@ -79,6 +80,7 @@ function Nav() {
         }
       });
     }
+    return () => {};
   }, [navReady]);
 
   useLayoutEffect(() => {

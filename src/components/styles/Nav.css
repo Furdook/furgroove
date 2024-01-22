@@ -51,6 +51,7 @@ hr {
     position: fixed;
 
     & #navbar__list {
+      margin: 1rem auto;
       background-color: var(--dark-clr);
       display: flex;
       flex-direction: column;
