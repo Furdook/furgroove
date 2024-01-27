@@ -1,26 +1,16 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import "./styles/Nav.css";
-import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];
   const [navReady, setNavReady] = useState(window.innerWidth < 840);
-
-  const navigate = useNavigate();
-
-  /**
-   * Navigate to the TOS page.
-   */
-  const navigateTOS = () => {
-    navigate("TOS");
-  };
 
   /**
    * Check if the user has scrolled past the header.
    * If they have make navbar opaque, and make 'hr' visible.
    */
   onscroll = () => {
-    if (window.location.pathname.includes("TOS")) return;
+    if (window.location.href.includes("TOS")) return;
     const underscore = document.getElementById("navbar__underscore")!;
     const navbar = document.getElementById("navbar")!;
 
@@ -95,16 +85,13 @@ function Nav() {
           return (
             <li className="navbar__list__item" key={item}>
               <a
-                href={`${item === "TOS" ? "#" : `#${item}`}`}
+                href={`#${item}`}
                 onClick={() => {
                   const input = document.getElementById(
                     "burger__input"
                   )! as HTMLInputElement;
                   if (input) {
                     input.checked = false;
-                  }
-                  if (item === "TOS") {
-                    navigateTOS();
                   }
                 }}
               >

@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import TOS from "./components/TOS.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 // archived pages:
 import Jan_2024 from "./archive/2024.01.tsx";
 import { TOS as TOS_2024 } from "./archive/2024.01.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "archive/january/",
     element: <Jan_2024 />,
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <TOS />,
   },
   {
-    path: "/",
+    path: "/*",
     element: <App />,
   },
 ]);
