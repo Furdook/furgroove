@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./styles/Nav.css";
 
 function Nav() {
@@ -31,10 +32,13 @@ function Nav() {
   });
 
   const setNav = () => {
+    const archive = document.getElementById("archive")!;
     const list = document.getElementById("navbar__list")!;
     if (window.innerWidth > 840) {
+      archive.setAttribute("style", "display: block;");
       list.setAttribute("style", "transform: translateX(0);");
     } else {
+      archive.setAttribute("style", "display: none;");
       list.setAttribute("style", "transform: translateX(-100%);");
     }
   };
@@ -57,6 +61,7 @@ function Nav() {
     if (navReady) {
       const input = document.getElementById("burger__input")!;
       const list = document.getElementById("navbar__list")!;
+      const archive = document.getElementById("archive")!;
 
       input.addEventListener("change", () => {
         const input = document.getElementById(
@@ -64,8 +69,10 @@ function Nav() {
         ) as HTMLInputElement;
 
         if (input.checked) {
+          archive.setAttribute("style", "display: block;");
           list.setAttribute("style", "transform: translateX(0);");
         } else {
+          archive.setAttribute("style", "display: none;");
           list.setAttribute("style", "transform: translateX(-100%);");
         }
       });
@@ -101,6 +108,9 @@ function Nav() {
           );
         })}
       </ul>
+      <Link id="archive" to="./archive/january">
+        Archive
+      </Link>
       <hr id="navbar__underscore" />
     </nav>
   );
