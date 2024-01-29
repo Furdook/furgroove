@@ -1,5 +1,3 @@
-import "./2024.january.css";
-
 import logo from "./assets/logo.png";
 import { useEffect, useLayoutEffect, useState } from "react";
 
