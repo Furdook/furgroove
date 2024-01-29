@@ -7,8 +7,8 @@ function Landing() {
       <div id="image__container">
         <img id="furgrooveImage" src={logo} alt="Furgroove logo" />
       </div>
-      <h1 id="eventDate">27th of January</h1>
-      <h2 id="eventLocation">FORT33 | Leusden, NL</h2>
+      <h1 id="eventDate">10th of August</h1>
+      <h2 id="eventLocation">BOOT 3 | Rotterdam, NL</h2>
     </>
   );
 }

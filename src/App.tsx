@@ -1,15 +1,14 @@
-import './App.css'
+import "./App.css";
 
-import Landing from './components/Landing'
-import Nav from './components/Nav'
-import Information from './components/Information'
-import Location from './components/Location'
-import Tickets from './components/Tickets'
-import DJs from './components/DJs'
-import Contact from './components/Contact'
+import Landing from "./components/Landing";
+import Nav from "./components/Nav";
+import Information from "./components/Information";
+import Location from "./components/Location";
+import Tickets from "./components/Tickets";
+import DJs from "./components/DJs";
+import Footer from "./components/Footer";
 
 function App() {
-
   return (
     <>
       <Landing />
@@ -17,12 +16,12 @@ function App() {
       <main id="mainContent">
         <Information />
         <Location />
-        <Tickets /> 
+        <Tickets />
         <DJs />
-        <Contact />
+        <Footer />
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,29 +1,32 @@
 #tos {
-    max-width: 600px;
-    justify-content: center;
-    margin-inline: auto;
-    line-height: 3rem;
-    font-size: 1rem;
+  max-width: 600px;
+  justify-content: center;
+  margin-inline: auto;
+  line-height: 3rem;
+  font-size: 1rem;
 
-    & ul {
-        line-height: 2rem;
-    }
+  & ul {
+    line-height: 2rem;
 
-    & h2 {
-        margin-left: 2rem;
-        text-align: left;
+    & li {
+      font-size: 1.2rem;
     }
+  }
 
-    & p {
-        margin-inline: 1rem;
-        width: auto;
-    }
+  & h2 {
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  & p {
+    margin-inline: 1rem;
+    width: auto;
+  }
 }
 
 #tos button {
-    left: 1rem;
-    height: 40px;
-    width: 140px;
-    font-weight: 200;
+  left: 1rem;
+  height: 40px;
+  width: 140px;
+  font-weight: 200;
 }
-

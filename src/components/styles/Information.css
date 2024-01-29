@@ -34,30 +34,13 @@
 #info__aside {
   position: relative;
   font-size: 1.8rem;
-  margin-top: 18rem;
+  margin-top: 15rem;
 
   & h1 {
     margin-right: 2rem;
     text-align: right;
   }
-
-  & .blue {
-    margin-top: 5rem;
-  }
 }
-
-#info__aside__time {
-  margin-top: -13rem;
-}
-
-#info__shape {
-  margin-left: -5rem;
-  background-color: var(--yellow-clr);
-  height: 14rem;
-  width: 1rem;
-  transform: rotate(-10deg);
-}
-
 @media screen and (max-width: 1210px) {
   #Information {
     flex-direction: column;
@@ -65,10 +48,6 @@
 
   #info__aside {
     margin-top: 40rem;
-
-    & #info__shape {
-      margin-left: 5rem;
-    }
   }
 }
 
@@ -90,8 +69,5 @@
       margin-inline: 1rem;
       width: auto;
     }
-  }
-  #info__shape {
-    opacity: 0;
   }
 }

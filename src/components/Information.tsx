@@ -26,7 +26,9 @@ function Information() {
         </div>
       </section>
       <aside id="info__aside">
-        <div id="info__shape"></div>
+        <h1 id="info__aside__boarding">
+          <strong className="yellow">BOARDING:</strong> 19:30
+        </h1>
         <h1 id="info__aside__time">
           START: <strong className="pink">20:00</strong>
         </h1>

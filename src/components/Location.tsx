@@ -8,7 +8,7 @@ function Location() {
       <div id="text__container">
         <p>
           The location for this edition is{" "}
-          <strong className="pink">FORT33</strong>. A concert venue with a big
+          <strong className="pink">BOOT 3</strong>. A concert venue with a big
           stage and bar where our house DJ's will move your paws. Across the
           stage is a <strong className="blue">big bar</strong> where you can
           order drinks or some snacks. The bar accepts coins you can buy at the
@@ -28,8 +28,8 @@ function Location() {
       <div id="location__container">
         <img id="location__venue-logo" src={venue} alt="Fort33 Logo" />
         <p id="location__address">
-          Bavoortseweg 25 <br />
-          3833 BM - Leusden, NL
+          Boompjes 750 <br />
+          3011 XZ - Rotterdam, NL
         </p>
       </div>
     </section>
