@@ -28,11 +28,13 @@
 
 #location__map {
   position: relative;
-  flex: 0 0 500px;
+  flex: 0 0 auto;
   margin-right: 3rem;
   margin-top: 2rem;
-  height: 500px;
+  width: 500px;
+  aspect-ratio: 1;
   background-color: var(--primary-clr);
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1230px) {
@@ -86,9 +88,5 @@
       width: 90vw;
       margin-left: -1rem;
     }
-  }
-
-  #location__map {
-    width: 95vw;
   }
 }

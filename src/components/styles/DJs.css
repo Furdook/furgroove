@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
 
-  /* on small screens change to column view and change order of quote and image for every toher artist */
+  /* on small screens change to column view and change order of quote and image for every other artist */
   @media screen and (max-width: 1200px) {
     flex-direction: column;
 
@@ -22,6 +22,12 @@
       margin-inline: auto;
     }
   }
+
+  @media screen and (min-width: 810px) {
+    img {
+      width: calc(100vw - 2rem);
+    }
+  }
 }
 
 .dj__image {
@@ -29,12 +35,10 @@
   display: flex;
   justify-content: center;
   margin-inline: 5rem;
-
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
   & img {
-    height: 27rem;
-    width: 27rem;
+    width: min(100vw - 2rem, 28rem);
     object-fit: cover;
     border: 5px solid var(--_border_clr);
   }
@@ -48,7 +52,7 @@
   padding: 2rem;
   margin-block: 7rem auto;
 
-  width: 40ch;
+  width: min(40ch, 80vw);
   max-width: 700px;
   word-wrap: break-word;
   line-height: 2rem;

@@ -7,7 +7,7 @@
   padding-top: 0;
 
   & img {
-    width: 500px;
+    width: min(500px, 100%);
     object-fit: cover;
   }
 
