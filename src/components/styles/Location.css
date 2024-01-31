@@ -21,7 +21,7 @@
 }
 
 #location__address {
-  margin-top: -1.5rem;
+  margin-top: -0.8rem;
   opacity: 50%;
   text-transform: uppercase;
 }
@@ -30,7 +30,7 @@
   position: relative;
   flex: 0 0 auto;
   margin-right: 3rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 500px;
   aspect-ratio: 1;
   background-color: var(--primary-clr);

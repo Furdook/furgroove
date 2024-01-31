@@ -1,6 +1,4 @@
 import "./styles/Location.css";
-import venue from "../assets/venue.png";
-import map from "../assets/map.webp";
 
 function Location() {
   return (
@@ -24,9 +22,14 @@ function Location() {
           The whole location is wheelchair friendly.
         </p>
       </div>
-      <img id="location__map" src={map} alt="Map of venue location" />
+      <a
+        href="https://www.google.com/maps/place/Boompjes+750,+3011+XZ+Rotterdam,+Netherlands/"
+        target="_blank"
+      >
+        <img id="location__map" src="./map.webp" alt="Map of venue location" />
+      </a>
       <div id="location__container">
-        <img id="location__venue-logo" src={venue} alt="Fort33 Logo" />
+        <img id="location__venue-logo" src="./boot10.svg" alt="Fort33 Logo" />
         <p id="location__address">
           Boompjes 750 <br />
           3011 XZ - Rotterdam, NL

@@ -1,5 +1,4 @@
 import "./styles/Contact.css";
-import logo from "../assets/logo.png";
 
 function Footer() {
   return (
@@ -16,7 +15,7 @@ function Footer() {
       <a href="./#archive" id="archive">
         <button>Archive - January 2024</button>
       </a>
-      <img src={logo} alt="event logo" id="footer__logo" />
+      <img src="./logo.png" alt="event logo" id="footer__logo" />
     </section>
   );
 }

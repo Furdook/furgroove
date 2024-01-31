@@ -9,13 +9,10 @@ import djem from "./assets/djem.webp";
 import stripe from "./assets/stripe.webp";
 import menos from "./assets/menos.webp";
 import { useNavigate } from "react-router-dom";
-
+/*
 function TOS() {
   const navigate = useNavigate();
 
-  /**
-   * Navigate to the previous page.
-   */
   const goback = () => {
     navigate("../");
   };
@@ -110,7 +107,7 @@ function TOS() {
       </p>
     </main>
   );
-}
+}*/
 
 function FurGrooveFirstEdition() {
   const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];

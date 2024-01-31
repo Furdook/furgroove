@@ -1,11 +1,10 @@
-import logo from "../assets/logo.png";
 import "./styles/Landing.css";
 
 function Landing() {
   return (
     <>
       <div id="image__container">
-        <img id="furgrooveImage" src={logo} alt="Furgroove logo" />
+        <img id="furgrooveImage" src="./logo.png" alt="Furgroove logo" />
       </div>
       <h1 id="eventDate">10th of August</h1>
       <h2 id="eventLocation">BOOT 3 | Rotterdam, NL</h2>

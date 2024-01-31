@@ -1,11 +1,10 @@
 import "./styles/Information.css";
-import party from "../assets/party.webp";
 
 function Information() {
   return (
     <main id="Information">
       <section id="info__main">
-        <img id="info__bg" src={party} alt="" />
+        <img id="info__bg" src="./party.webp" alt="" />
         <div id="info__bg__text">
           <p>
             The party starts at <strong className="pink">20:00</strong> and will
@@ -32,7 +31,7 @@ function Information() {
         <h1 id="info__aside__time">
           START: <strong className="pink">20:00</strong>
         </h1>
-        <h1 className="blue">6 HOURS</h1>
+        <h1 className="blue">4 HOURS</h1>
       </aside>
     </main>
   );
