@@ -4,9 +4,21 @@
   flex-direction: column;
 }
 
+/* flip order for every other DJ */
+.dj:nth-child(even) {
+  flex-direction: row-reverse;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
 .dj {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 5rem;
 
   /* on small screens change to column view and change order of quote and image for every other artist */
   @media screen and (max-width: 1200px) {
@@ -34,7 +46,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-inline: 5rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
   & img {
@@ -90,12 +101,4 @@
   --_border_clr: var(--yellow-clr);
   --_quote_clr: var(--blue-clr);
   --_name-clr: var(--pink-clr);
-}
-
-/* correct positioning on fullscreen view */
-.menos,
-.djem {
-  @media screen and (min-width: 1200px) {
-    margin-left: 5rem;
-  }
 }

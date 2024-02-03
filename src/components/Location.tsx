@@ -1,35 +1,34 @@
 import "./styles/Location.css";
-import venue from "../assets/venue.png";
-import map from "../assets/map.webp";
+import map from "/map.webp";
+import venue from "/boot10.svg";
 
 function Location() {
   return (
     <section id="Location">
       <div id="text__container">
         <p>
-          The location for this edition is{" "}
-          <strong className="pink">FORT33</strong>. A concert venue with a big
-          stage and bar where our house DJ's will move your paws. Across the
-          stage is a <strong className="blue">big bar</strong> where you can
-          order drinks or some snacks. The bar accepts coins you can buy at the
-          entrance. Coins can be bought with cash or card.
-          <br />
-          <br />
-          Our location will also have a big enough{" "}
-          <strong className="yellow">fursuit lounge</strong> to cool down and
-          store your suits. You can also get some water or dry up in front of
-          the fans.
-          <br />
-          <br />
-          The whole location is wheelchair friendly.
+          he location is <strong className="yellow">Boot3</strong> from BOOT10.
+          A big party ship with several rooms to dance and relax during the
+          summerevening.
+          <br /> Our DJ's will give a summer vibe feeling while we see the
+          sunset near the Erasmusbrug. With a big bar there will be enough to
+          drink. Coins can be bought with cash or card. <br />
+          Our location will also have a big enough fursuit lounge to cool down
+          and store your suits. You can also get some water or dry up in front
+          of the fans.
         </p>
       </div>
-      <img id="location__map" src={map} alt="Map of venue location" />
+      <a
+        href="https://www.google.com/maps/place/Boompjes+750,+3011+XZ+Rotterdam,+Netherlands/"
+        target="_blank"
+      >
+        <img id="location__map" src={map} alt="Map of venue location" />
+      </a>
       <div id="location__container">
-        <img id="location__venue-logo" src={venue} alt="Fort33 Logo" />
+        <img id="location__venue-logo" src={venue} alt="Boot10 Logo" />
         <p id="location__address">
-          Bavoortseweg 25 <br />
-          3833 BM - Leusden, NL
+          Boompjes 750 <br />
+          3011 XZ - Rotterdam, NL
         </p>
       </div>
     </section>

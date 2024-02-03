@@ -1,7 +1,7 @@
 import "./styles/Contact.css";
-import logo from "../assets/logo.png";
+import logo from "/logo.webp";
 
-function Contact() {
+function Footer() {
   return (
     <section id="Contact">
       <button onClick={() => window.open("https://t.me/furgroove", "_blank")}>
@@ -13,9 +13,12 @@ function Contact() {
       >
         Telegram Announcements
       </button>
+      <a href="https://furgroove.club/archive/" target="_blank" id="archive">
+        <button>Archive - January 2024</button>
+      </a>
       <img src={logo} alt="event logo" id="footer__logo" />
     </section>
   );
 }
 
-export default Contact;
+export default Footer;
