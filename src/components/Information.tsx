@@ -7,18 +7,13 @@ function Information() {
         <img id="info__bg" src="./party.webp" alt="" />
         <div id="info__bg__text">
           <p>
-            The party starts at <strong className="pink">20:00</strong> and will
-            keep you busy for <strong className="blue">6 full hours</strong>. We
-            got our own DJ's, known from{" "}
-            <strong className="yellow">Summerbo.at</strong> and several cons all
-            over Europe. They will play all kinds of styles so always something
-            for you!
-            <br />
-            <br />
+            The ship is setting sail at <strong className="pink">20:00</strong>{" "}
+            and will explore Rotterdam from the water for 4 full hours. We got
+            our own DJ's, known from Summerbo.at and several cons all over
+            Europe. <br />
+            They will play all kinds of styles so always something for you!
             Feeling like chilling a bit after dancing? Go cool down outside with
-            a drink and snack!
-            <br />
-            <br />
+            a drink and snack! <br />
             All attendees get a badge with lanyard for attending the dance.We
             will also sell special t-shirts you can pre-order soon!
           </p>

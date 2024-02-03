@@ -5,21 +5,15 @@ function Location() {
     <section id="Location">
       <div id="text__container">
         <p>
-          The location for this edition is{" "}
-          <strong className="pink">BOOT 3</strong>. A concert venue with a big
-          stage and bar where our house DJ's will move your paws. Across the
-          stage is a <strong className="blue">big bar</strong> where you can
-          order drinks or some snacks. The bar accepts coins you can buy at the
-          entrance. Coins can be bought with cash or card.
-          <br />
-          <br />
-          Our location will also have a big enough{" "}
-          <strong className="yellow">fursuit lounge</strong> to cool down and
-          store your suits. You can also get some water or dry up in front of
-          the fans.
-          <br />
-          <br />
-          The whole location is wheelchair friendly.
+          he location is <strong className="yellow">Boot3</strong> from BOOT10.
+          A big party ship with several rooms to dance and relax during the
+          summerevening.
+          <br /> Our DJ's will give a summer vibe feeling while we see the
+          sunset near the Erasmusbrug. With a big bar there will be enough to
+          drink. Coins can be bought with cash or card. <br />
+          Our location will also have a big enough fursuit lounge to cool down
+          and store your suits. You can also get some water or dry up in front
+          of the fans.
         </p>
       </div>
       <a
