@@ -70,4 +70,8 @@
       width: auto;
     }
   }
+
+  #info__aside {
+    font-size: 1.2rem;
+  }
 }

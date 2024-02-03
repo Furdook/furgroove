@@ -1,10 +1,11 @@
 import "./styles/Information.css";
+import party from "/party.webp";
 
 function Information() {
   return (
     <main id="Information">
       <section id="info__main">
-        <img id="info__bg" src="./party.webp" alt="" />
+        <img id="info__bg" src={party} alt="" />
         <div id="info__bg__text">
           <p>
             The ship is setting sail at <strong className="pink">20:00</strong>{" "}

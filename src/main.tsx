@@ -4,13 +4,8 @@ import App from "./App.tsx";
 import TOS from "./components/TOS.tsx";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import FurGrooveFirstEdition from "./archive/2024_january.tsx";
 
 const router = createHashRouter([
-  {
-    path: "archive/",
-    element: <FurGrooveFirstEdition />,
-  },
   {
     path: "tos/",
     element: <TOS />,

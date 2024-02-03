@@ -1,10 +1,11 @@
 import "./styles/DJs.css";
-import DJ from "./DJ";
+//import DJ from "./DJ";
 
 function DJs() {
   return (
     <section id="DJs">
-      <DJ
+      <h1 className="yellow">DJs Announcing Soon...</h1>
+      {/* <DJ
         name="beatbird"
         quote="The one and only Dutch DJ Bird! Living close to the venue so it's
           almost like home. Loves to play all kinds of styles!"
@@ -26,7 +27,7 @@ function DJs() {
         quote="One of our Dutch DJ's that will end the evening with one mission; Make
           everyone like hardstyle! Get ready for some bangers, sing-a-longs and
           a bass that will blow you away."
-      />
+      /> */}
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import "./styles/Contact.css";
+import logo from "/logo.webp";
 
 function Footer() {
   return (
@@ -12,10 +13,10 @@ function Footer() {
       >
         Telegram Announcements
       </button>
-      <a href="./#archive" id="archive">
+      <a href="https://furgroove.club/archive/" target="_blank" id="archive">
         <button>Archive - January 2024</button>
       </a>
-      <img src="./logo.png" alt="event logo" id="footer__logo" />
+      <img src={logo} alt="event logo" id="footer__logo" />
     </section>
   );
 }

@@ -51,6 +51,10 @@
     margin: auto;
   }
 
+  a {
+    margin-inline: auto;
+  }
+
   #location__map {
     margin: auto;
     width: 600px;
