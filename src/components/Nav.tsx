@@ -21,6 +21,7 @@ function Nav() {
       underscore.setAttribute("style", "opacity: 0;");
       navbar.setAttribute("style", "background-color: transparent;");
     }
+    setNav();
   };
 
   window.addEventListener("resize", () => {
