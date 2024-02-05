@@ -9,7 +9,7 @@ function Tickets() {
       <h3 className="blue">Standard Ticket</h3>
       <h2>30€</h2>
       <p className="fade">*prices include a 2.5€ service fee</p>
-      <div id="button__container">
+      {/* <div id="button__container">
         <button
           onClick={() =>
             window.open(
@@ -21,7 +21,7 @@ function Tickets() {
           TICKETS
         </button>
       </div>
-      <p className="fade">*external site</p>
+      <p className="fade">*external site</p> */}
     </section>
   );
 }
