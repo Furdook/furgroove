@@ -1,5 +1,12 @@
 import "./styles/DJs.css";
 
+/**
+ * Component to make a DJ section. Every other DJ will be displayed in a different color
+ * as well as opposite order of quote and name/image
+ *
+ * @param props name of the DJ and a quote from them.
+ * @returns a DJ component displaying the name and quote of the DJ.
+ */
 function DJ(props: { name: string; quote: string }) {
   return (
     <section className={"dj " + props.name}>

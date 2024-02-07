@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import "./styles/Nav.css";
 
 function Nav() {
+  // Navigation items
   const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];
   const [navReady, setNavReady] = useState(window.innerWidth < 840);
 
@@ -24,6 +25,10 @@ function Nav() {
     setNav();
   };
 
+  /**
+   * If the user resizes the window, check if the navbar should be ready.
+   * Used when resizing to smaller window sizes to update the nacigation menu.
+   */
   window.addEventListener("resize", () => {
     if (window.innerWidth < 841) setNavReady(true);
     else setNavReady(false);
@@ -31,6 +36,9 @@ function Nav() {
     setNav();
   });
 
+  /**
+   * Moves naviagtion menu in or out of view depending on window size.
+   */
   const setNav = () => {
     const list = document.getElementById("navbar__list")!;
     if (window.innerWidth > 840) {
@@ -40,6 +48,10 @@ function Nav() {
     }
   };
 
+  /**
+   * Renders the burger menu icon for smaller screens.
+   * CSS only solution.
+   */
   const renderBurger = () => {
     return (
       <label htmlFor="burger__input">
@@ -54,6 +66,9 @@ function Nav() {
     );
   };
 
+  /**
+   * Adds event listener to the burger menu icon.
+   */
   useEffect(() => {
     if (navReady) {
       const input = document.getElementById("burger__input")!;
@@ -74,6 +89,9 @@ function Nav() {
     return () => {};
   }, [navReady]);
 
+  /**
+   * Used to set the navigation menu when the component is first rendered.
+   */
   useLayoutEffect(() => {
     setNav();
   });
