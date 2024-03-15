@@ -1,22 +1,28 @@
 "use client";
 import { useEffect, useLayoutEffect, useState } from "react";
 
+import { navigation } from "@/constants";
+
 export default function Navigation() {
-  // Navigation items
-  const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];
   const [navReady, setNavReady] = useState(false);
+
+  const handleUnderline = () => {
+    const underscore = document.getElementById("navbar__underscore")!;
+    if (window.scrollY > 485 && window.innerWidth > 840) {
+      underscore.setAttribute("style", "opacity: 1;");
+    } else {
+      underscore.setAttribute("style", "opacity: 0;");
+    }
+  };
 
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
-      const underscore = document.getElementById("navbar__underscore")!;
-      if (window.scrollY > 485 || window.innerWidth <= 840) {
-        underscore.setAttribute("style", "opacity: 1;");
-      } else {
-        underscore.setAttribute("style", "opacity: 0;");
-      }
+      handleUnderline();
     });
 
     window.addEventListener("resize", () => {
+      handleUnderline();
+
       const list = document.getElementById("navbar__list")!;
       handleNavOpen(false);
       if (window.innerWidth <= 840) {
@@ -93,13 +99,13 @@ export default function Navigation() {
       {navReady ? renderBurger() : null}
       <ul
         id="navbar__list"
-        className="flex gap-8 justify-center mt-4 text-2xl uppercase tracking-wide md:my-4 pt-2 md:flex-row flex-col md:pl-0 pl-6 my-auto h-full"
+        className="gap-6 justify-center flex md:justify-around mt-4 text-2xl uppercase tracking-wide md:my-4 pt-2 md:flex-row flex-col md:pl-0 pl-6 h-full w-full max-w-4xl m-auto"
       >
-        {navItems.map((item) => {
+        {navigation.map((item, index) => {
           return (
-            <li key={item}>
+            <li key={index}>
               <a
-                href={`#${item}`}
+                href={item.link}
                 onClick={() => {
                   const input = document.getElementById(
                     "burger__input"
@@ -110,7 +116,7 @@ export default function Navigation() {
                   handleNavOpen(false);
                 }}
               >
-                {item}
+                {item.title}
               </a>
             </li>
           );

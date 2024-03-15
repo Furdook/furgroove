@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Information() {
   return (
     <section
-      id="Information"
+      id="info"
       className="lg:flex-row flex-col w-full p-6 mt-96  h-screen"
     >
       <section className="h-fit relative m-0">

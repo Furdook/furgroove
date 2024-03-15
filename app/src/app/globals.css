@@ -96,3 +96,33 @@ a:hover {
   text-decoration-thickness: 0.3rem;
   text-shadow: 0px 0px 5px #77f2da;
 }
+
+.border-colour {
+  border: 5px solid var(--_border-clr);
+}
+
+.title-bg-colour {
+  background-color: var(--_name-clr);
+}
+
+.quote-bg-colour {
+  background-color: var(--_quote-clr);
+}
+
+.beatbird {
+  --_border-clr: #77f2da;
+  --_quote-clr: #e25691;
+  --_name-clr: #eeae43;
+}
+
+.menos {
+  --_border-clr: #e25691;
+  --_quote-clr: #eeae43;
+  --_name-clr: #77f2da;
+}
+
+.yellowstreak {
+  --_border-clr: #eeae43;
+  --_quote-clr: #77f2da;
+  --_name-clr: #e25691;
+}
