@@ -4,7 +4,7 @@ export default function Information() {
   return (
     <section
       id="Information"
-      className="lg:flex-row flex-col w-full p-6 mt-96 mb-56 h-screen"
+      className="lg:flex-row flex-col w-full p-6 mt-96  h-screen"
     >
       <section className="h-fit relative m-0">
         <Image

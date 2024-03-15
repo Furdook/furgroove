@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Location() {
   return (
-    <section id="Location" className="p-6 flex-wrap my-56 ">
+    <section id="Location" className="p-6 flex-wrap my-52">
       <p className="text-xl mb-12 max-w-[712px] w-[50ch] self-start flex-grow ml-0 b:mr-auto">
         The location is <strong className="text-yellow">Boot3</strong> from
         BOOT10. A big party ship with several rooms to dance and relax during
