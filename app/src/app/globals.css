@@ -95,3 +95,10 @@ section {
     transform: rotate(-45deg);
   }
 }
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #e25691;
+  text-decoration-thickness: 0.3rem;
+  text-shadow: 0px 0px 5px #77f2da;
+}

@@ -4,49 +4,68 @@ import { useEffect, useLayoutEffect, useState } from "react";
 export default function Navigation() {
   // Navigation items
   const navItems = ["Information", "Location", "Tickets", "DJs", "TOS"];
-  const [navReady, setNavReady] = useState(window.innerWidth < 840);
+  const [navReady, setNavReady] = useState(false);
 
-  /**
-   * Check if the user has scrolled past the header.
-   * If they have make navbar opaque, and make 'hr' visible.
-   */
-  onscroll = () => {
-    if (window.location.href.includes("TOS")) return;
-    const underscore = document.getElementById("navbar__underscore")!;
-    const navbar = document.getElementById("navbar")!;
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      const underscore = document.getElementById("navbar__underscore")!;
+      if (window.scrollY > 485 || window.innerWidth <= 840) {
+        underscore.setAttribute("style", "opacity: 1;");
+      } else {
+        underscore.setAttribute("style", "opacity: 0;");
+      }
+    });
 
-    if (window.scrollY > 485 || window.innerWidth < 841) {
-      underscore.setAttribute("style", "opacity: 1;");
-      navbar.setAttribute("style", "background-color: var(--background);");
-    } else {
-      underscore.setAttribute("style", "opacity: 0;");
-      navbar.setAttribute("style", "background-color: transparent;");
+    window.addEventListener("resize", () => {
+      const list = document.getElementById("navbar__list")!;
+      handleNavOpen(false);
+      if (window.innerWidth <= 840) {
+        list.classList.add("hidden");
+        setNavReady(true);
+      } else {
+        list.classList.remove("hidden");
+        setNavReady(false);
+      }
+    });
+  }
+
+  const handleNavOpen = (state: boolean) => {
+    if (navReady) {
+      const body = document.querySelector("body")!;
+      const list = document.getElementById("navbar__list")!;
+      const nav = document.getElementById("navbar")!;
+
+      if (state) {
+        nav.classList.add("bg-primary-900");
+        list.classList.remove("hidden");
+        body.classList.add("overflow-hidden");
+      } else {
+        nav.classList.remove("bg-primary-900");
+        list.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      }
     }
-    setNav();
   };
 
-  /**
-   * If the user resizes the window, check if the navbar should be ready.
-   * Used when resizing to smaller window sizes to update the nacigation menu.
-   */
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 841) setNavReady(true);
-    else setNavReady(false);
+  useEffect(() => {
+    if (navReady) {
+      const input = document.getElementById(
+        "burger__input"
+      )! as HTMLInputElement;
 
-    setNav();
-  });
-
-  /**
-   * Moves naviagtion menu in or out of view depending on window size.
-   */
-  const setNav = () => {
-    const list = document.getElementById("navbar__list")!;
-    if (window.innerWidth > 840) {
-      list.setAttribute("style", "transform: translateX(0);");
-    } else {
-      list.setAttribute("style", "transform: translateX(-100%);");
+      input.addEventListener("change", () => {
+        handleNavOpen(input.checked);
+      });
     }
-  };
+    return () => {};
+  }, [navReady]);
+
+  useLayoutEffect(() => {
+    if (window.innerWidth <= 840) {
+      document.getElementById("navbar__list")!.classList.add("hidden");
+      setNavReady(true);
+    } else setNavReady(false);
+  }, []);
 
   /**
    * Renders the burger menu icon for smaller screens.
@@ -66,22 +85,19 @@ export default function Navigation() {
     );
   };
 
-  /**
-   * Used to set the navigation menu when the component is first rendered.
-   */
-  useLayoutEffect(() => {
-    setNav();
-  });
   return (
-    <nav id="navbar" className="fixed md:sticky top-0 w-screen">
+    <nav
+      id="navbar"
+      className="fixed md:sticky top-0 w-screen h-screen md:h-auto md:bg-primary-900 z-40"
+    >
       {navReady ? renderBurger() : null}
       <ul
         id="navbar__list"
-        className="flex gap-8 justify-center mt-4 text-2xl uppercase tracking-wide my-4 pt-2 md:flex-row flex-col md:pl-0 pl-6 bg-primary-900"
+        className="flex gap-8 justify-center mt-4 text-2xl uppercase tracking-wide md:my-4 pt-2 md:flex-row flex-col md:pl-0 pl-6 my-auto h-full"
       >
         {navItems.map((item) => {
           return (
-            <li className="navbar__list__item" key={item}>
+            <li key={item}>
               <a
                 href={`#${item}`}
                 onClick={() => {
@@ -91,6 +107,7 @@ export default function Navigation() {
                   if (input) {
                     input.checked = false;
                   }
+                  handleNavOpen(false);
                 }}
               >
                 {item}
@@ -99,7 +116,7 @@ export default function Navigation() {
           );
         })}
       </ul>
-      <hr id="navbar__underscore" className="hidden md:block" />
+      <hr id="navbar__underscore" className="opacity-0 md:block" />
     </nav>
   );
 }
