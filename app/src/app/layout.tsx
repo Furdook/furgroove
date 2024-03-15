@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/navigation";
 
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,15 +29,33 @@ export default function RootLayout({
             height={300}
             className="mx-auto"
           />
-          <h1 className="text-center text-3xl uppercase tracking-wide mt-4">
+          <h1 className="mt-4 text-center text-3xl uppercase tracking-wide">
             10th of August
           </h1>
-          <h2 className="text-center text-xl uppercase tracking-wide mb-14">
+          <h2 className="mb-14 text-center text-xl uppercase tracking-wide">
             BOOT 3 | Rotterdam, NL
           </h2>
         </header>
         <Navigation />
         {children}
+        <footer className="flex flex-col">
+          <Button className="mx-auto mt-24 w-64 text-xl font-medium">
+            Telegram Group Chat
+          </Button>
+          <Button className="mx-auto my-4 w-64 text-xl font-medium">
+            Telegram Channel
+          </Button>
+          <Button className="mx-auto mb-24 w-64 text-xl font-medium">
+            Website Archive
+          </Button>
+          <Image
+            src="/logo.webp"
+            alt=""
+            height={100}
+            width={500}
+            className="mx-auto mb-12"
+          />
+        </footer>
       </body>
     </html>
   );

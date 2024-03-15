@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Location() {
   return (
-    <section id="location" className="p-6 flex-wrap my-52">
-      <p className="text-xl mb-12 max-w-[712px] w-[50ch] self-start flex-grow ml-0 b:mr-auto">
+    <section id="location" className="my-52 flex-wrap p-6">
+      <p className="mb-12 ml-0 w-[50ch] max-w-[712px] flex-grow self-start text-xl b:mr-auto">
         The location is <strong className="text-yellow">Boot3</strong> from
         BOOT10. A big party ship with several rooms to dance and relax during
         the summerevening.
@@ -18,16 +18,18 @@ export default function Location() {
         href="https://www.google.com/maps/place/Boompjes+750,+3011+XZ+Rotterdam,+Netherlands/"
         target="_blank"
       >
-        <img
+        <Image
           id="location__map"
           src="/map.webp"
           alt="Map of venue location"
-          className="w-full b:w-96 max-w-[712px] mx-auto"
+          height={400}
+          width={400}
+          className="mx-auto w-full max-w-[712px] b:w-96"
         />
       </a>
-      <div className="b:mt-[-10rem] b:ml-0 b:mr-auto mx-auto max-w-[712px] w-full">
+      <div className="mx-auto w-full max-w-[712px] b:ml-0 b:mr-auto b:mt-[-10rem]">
         <Image src="/boot10.svg" alt="Boot10 Logo" height={200} width={300} />
-        <p className="uppercase opacity-50 relative">
+        <p className="relative uppercase opacity-50">
           Boompjes 750 <br />
           3011 XZ - Rotterdam, NL
         </p>

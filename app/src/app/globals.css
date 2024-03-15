@@ -109,19 +109,23 @@ a:hover {
   background-color: var(--_quote-clr);
 }
 
-.beatbird {
+.position-colour {
+  background-color: var(--_border-clr);
+}
+
+.card-container:nth-child(3n + 0) {
   --_border-clr: #77f2da;
   --_quote-clr: #e25691;
   --_name-clr: #eeae43;
 }
 
-.menos {
+.card-container:nth-child(3n + 1) {
   --_border-clr: #e25691;
   --_quote-clr: #eeae43;
   --_name-clr: #77f2da;
 }
 
-.yellowstreak {
+.card-container:nth-child(3n + 2) {
   --_border-clr: #eeae43;
   --_quote-clr: #77f2da;
   --_name-clr: #e25691;

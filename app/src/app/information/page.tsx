@@ -4,18 +4,18 @@ export default function Information() {
   return (
     <section
       id="info"
-      className="lg:flex-row flex-col w-full p-6 mt-96  h-screen"
+      className="mt-96 h-screen w-full flex-col p-6  lg:flex-row"
     >
-      <section className="h-fit relative m-0">
+      <section className="relative m-0 h-fit">
         <Image
           src="/party.webp"
           alt="FurGroove"
           width={2000}
           height={500}
-          className="object-cover border-4 border-blue rotate-[-10deg] lg:w-[2000px] w-[650px]"
+          className="w-[650px] rotate-[-10deg] border-4 border-blue object-cover lg:w-[2000px]"
         />
-        <div className="bg-primary-900/90 md:ml-10 pl-10 md:pl-24 p-6 text-lg md:text-xl w-screen md:left-[-5rem] md:w-[50rem] lg:w-[54rem] absolute md:pr-24">
-          <p className="border-l-blue border-l-4 px-6">
+        <div className="absolute w-screen bg-primary-900/90 p-6 pl-10 text-lg md:left-[-5rem] md:ml-10 md:w-[50rem] md:pl-24 md:pr-24 md:text-xl lg:w-[54rem]">
+          <p className="border-l-4 border-l-blue px-6">
             The ship is setting sail at{" "}
             <strong className="text-pink">20:00</strong> and will explore
             Rotterdam from the water for 4 full hours. We got our own DJ's,
@@ -31,7 +31,7 @@ export default function Information() {
 
       <aside
         id="info__aside"
-        className="ml-auto text-right relative justify-end w-full text-4xl space-y-6 lg:mt-0 mt-24 max-w-[712px] mx-auto"
+        className="relative mx-auto ml-auto mt-24 w-full max-w-[712px] justify-end space-y-6 text-right text-4xl lg:mt-0"
       >
         <h1 id="info__aside__boarding">
           <strong className="text-yellow">BOARDING:</strong> 19:30

@@ -53,19 +53,6 @@ export default function Navigation() {
     }
   };
 
-  useEffect(() => {
-    if (navReady) {
-      const input = document.getElementById(
-        "burger__input"
-      )! as HTMLInputElement;
-
-      input.addEventListener("change", () => {
-        handleNavOpen(input.checked);
-      });
-    }
-    return () => {};
-  }, [navReady]);
-
   useLayoutEffect(() => {
     if (window.innerWidth <= 840) {
       document.getElementById("navbar__list")!.classList.add("hidden");
@@ -80,7 +67,16 @@ export default function Navigation() {
   const renderBurger = () => {
     return (
       <label htmlFor="burger__input">
-        <input id="burger__input" type="checkbox" />
+        <input
+          id="burger__input"
+          type="checkbox"
+          onClick={() => {
+            const input = document.getElementById(
+              "burger__input",
+            )! as HTMLInputElement;
+            handleNavOpen(input.checked);
+          }}
+        />
         <div id="burger">
           <div></div>
           <div></div>
@@ -94,12 +90,12 @@ export default function Navigation() {
   return (
     <nav
       id="navbar"
-      className="fixed md:sticky top-0 w-screen h-screen md:h-auto md:bg-primary-900 z-40"
+      className="fixed top-0 z-40 h-screen w-screen md:sticky md:h-auto md:bg-primary-900"
     >
       {navReady ? renderBurger() : null}
       <ul
         id="navbar__list"
-        className="gap-6 justify-center flex md:justify-around mt-4 text-2xl uppercase tracking-wide md:my-4 pt-2 md:flex-row flex-col md:pl-0 pl-6 h-full w-full max-w-4xl m-auto"
+        className="m-auto mt-4 flex h-full w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex-row md:justify-around md:pl-0"
       >
         {navigation.map((item, index) => {
           return (
@@ -108,7 +104,7 @@ export default function Navigation() {
                 href={item.link}
                 onClick={() => {
                   const input = document.getElementById(
-                    "burger__input"
+                    "burger__input",
                   )! as HTMLInputElement;
                   if (input) {
                     input.checked = false;
