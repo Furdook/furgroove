@@ -11,6 +11,7 @@ const config = {
   theme: {
     screens: {
       lg: "1200px",
+      b: "1080px",
       md: "840px",
     },
     container: {

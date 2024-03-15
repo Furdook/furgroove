@@ -5,6 +5,7 @@
 :root {
   --background: #1d1527;
   --foreground: #e8e4dd;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -66,34 +67,27 @@ section {
   /* animation pace */
   transform: rotate(0deg);
   transition: 0.2s ease;
-
-  /* position first span*/
-  &:nth-child(1) {
-    top: 0px;
-  }
-
-  /* position fourth span, layer #3*/
-  &:nth-child(4) {
-    top: calc(var(--_size) / 2);
-  }
 }
 
-/* animate on click */
-#burger__input:checked + #burger > div {
-  /* remove span 1 & 4 */
-  &:nth-child(1),
-  &:nth-child(4) {
-    top: 25%;
-    left: 50%;
-    width: 0%;
-  }
-  /* create cross with span 2 & 3*/
-  &:nth-child(2) {
-    transform: rotate(45deg);
-  }
-  &:nth-child(3) {
-    transform: rotate(-45deg);
-  }
+#burger div:nth-child(1) {
+  top: 0px;
+}
+
+#burger div:nth-child(4) {
+  top: calc(var(--_size) / 2);
+}
+
+#burger__input:checked + #burger > div:nth-child(1),
+#burger__input:checked + #burger > div:nth-child(4) {
+  top: 25%;
+  left: 50%;
+  width: 0%;
+}
+#burger__input:checked + #burger > div:nth-child(2) {
+  transform: rotate(45deg);
+}
+#burger__input:checked + #burger > div:nth-child(3) {
+  transform: rotate(-45deg);
 }
 
 a:hover {

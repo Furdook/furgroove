@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Information() {
   return (
-    <section className="flex lg:flex-row flex-col w-full p-6 mt-56 mb-96">
+    <section
+      id="Information"
+      className="lg:flex-row flex-col w-full p-6 mt-96 mb-56 h-screen"
+    >
       <section className="h-fit relative m-0">
         <Image
           src="/party.webp"
@@ -28,7 +31,7 @@ export default function Information() {
 
       <aside
         id="info__aside"
-        className="ml-auto text-right relative justify-end w-full text-4xl space-y-6 lg:mt-0 mt-24"
+        className="ml-auto text-right relative justify-end w-full text-4xl space-y-6 lg:mt-0 mt-24 max-w-[712px] mx-auto"
       >
         <h1 id="info__aside__boarding">
           <strong className="text-yellow">BOARDING:</strong> 19:30
