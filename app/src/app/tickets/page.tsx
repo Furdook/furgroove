@@ -13,7 +13,9 @@ export default function Tickets() {
       <h3>30€</h3>
       <h2 className="mb-2 mt-6 text-pink">Late Ticket</h2>
       <h3>32.50€</h3>
-      <Button className="mt-8">TICKETS</Button>
+      <a href="https://eventix.shop/83fg7sdc" target="_blank">
+        <Button className="mt-8">TICKETS</Button>
+      </a>
     </section>
   );
 }

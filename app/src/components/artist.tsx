@@ -31,7 +31,7 @@ export default function Artist(props: {
           </CardContent>
         )}
       </CardContent>
-      <CardDescription className="quote-bg-colour my-auto h-fit w-full max-w-[50ch] text-wrap p-6 text-lg">
+      <CardDescription className="quote-bg-colour mx-auto my-auto h-fit w-full text-wrap p-6 text-lg">
         {props.quote}
       </CardDescription>
     </Card>

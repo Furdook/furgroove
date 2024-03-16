@@ -40,15 +40,27 @@ export default function RootLayout({
         <Navigation />
         {children}
         <footer className="flex flex-col">
-          <Button className="mx-auto mt-24 w-64 text-xl font-medium">
-            Telegram Group Chat
-          </Button>
-          <Button className="mx-auto my-4 w-64 text-xl font-medium">
-            Telegram Channel
-          </Button>
-          <Button className="mx-auto mb-24 w-64 text-xl font-medium">
-            Website Archive
-          </Button>
+          <a
+            href="https://t.me/furgroove"
+            target="_blank"
+            className="mx-auto mt-24 text-xl font-medium"
+          >
+            <Button className="w-64">Telegram Group Chat</Button>
+          </a>
+          <a
+            href="https://t.me/furgrooveinfo"
+            target="_blank"
+            className="mx-auto my-4 text-xl font-medium"
+          >
+            <Button className="w-64">Telegram Channel</Button>
+          </a>
+          <a
+            href="https://furgroove.club/archive/"
+            target="_blank"
+            className="mx-auto mb-24 text-xl font-medium"
+          >
+            <Button className="w-64">Website Archive</Button>
+          </a>
           <a href="../">
             <img
               src="/logo.webp"
