@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
   Dialog,
   DialogContent,
@@ -9,12 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 
 import { gallery } from "@/constants";
 
@@ -28,7 +21,7 @@ export default function Gallery() {
             <Dialog key={index}>
               <DialogTrigger className="relative min-w-56 flex-shrink-0 flex-grow basis-1/4 gap-6">
                 <Card className="hover:cursor-zoom-in">
-                  <Image
+                  <img
                     src={item.image}
                     alt=""
                     height={400}
@@ -45,7 +38,7 @@ export default function Gallery() {
               </DialogTrigger>
               <DialogContent className="w-fit max-w-4xl rounded-lg border-[1px] border-primary-800">
                 <DialogHeader>
-                  <Image
+                  <img
                     src={item.image}
                     height={400}
                     width={400}

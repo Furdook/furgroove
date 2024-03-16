@@ -1,5 +1,4 @@
 import Artist from "@/components/artist";
-
 import { artists } from "@/constants";
 
 export default function Artists() {

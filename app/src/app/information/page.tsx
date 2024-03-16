@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Information() {
   return (
     <section
@@ -7,7 +5,7 @@ export default function Information() {
       className="mt-96 h-screen w-full flex-col p-6  lg:flex-row"
     >
       <section className="relative m-0 h-fit">
-        <Image
+        <img
           src="/party.webp"
           alt="FurGroove"
           width={2000}

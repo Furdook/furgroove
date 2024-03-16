@@ -102,7 +102,7 @@ const team = [
     className: "hunter",
     quote: "Dutch Boy liking big things bark abrk bark bark bark bark bark",
     position: "Event Organiser",
-    image: "/hunter.jpg",
+    image: "/hunter.webp",
   },
   {
     name: "Mai Tai",
@@ -110,7 +110,7 @@ const team = [
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
     position: "Web Developer",
-    image: "/mai.jpeg",
+    image: "/mai.webp",
   },
   {
     name: "Jay the Wolf",
@@ -140,16 +140,19 @@ const team = [
 const artists = [
   {
     name: "beatbird",
+    image: "/beatbird.webp",
     quote:
       "The one and only Dutch DJ Bird! Living close to the venue so it's almost like home. Loves to play all kinds of styles!",
   },
   {
     name: "yellowstreak",
+    image: "/yellowstreak.webp",
     quote:
       "The one and only Dutch DJ Bird! Living close to the venue so it's almost like home. Loves to play all kinds of styles!",
   },
   {
     name: "menos",
+    image: "/menos.webp",
     quote:
       "One of our Dutch DJ's that will end the evening with one mission; Make everyone like hardstyle! Get ready for some bangers, sing-a-longs and a bass that will blow you away.",
   },

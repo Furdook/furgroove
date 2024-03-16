@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="mt-24">
           <a href="../">
-            <Image
+            <img
               src="/logo.webp"
               alt="FurGroove"
               width={700}
@@ -51,7 +50,7 @@ export default function RootLayout({
             Website Archive
           </Button>
           <a href="../">
-            <Image
+            <img
               src="/logo.webp"
               alt=""
               height={100}

@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { Card, CardDescription, CardTitle, CardContent } from "./ui/card";
 
 export default function Artist(props: {
   name: string;
   quote: string;
+  image: string;
   position?: string;
   className?: string;
 }) {
@@ -13,8 +13,8 @@ export default function Artist(props: {
       className={`${props.className ? "team-member" : ""} flex max-w-[712px] flex-col gap-6 p-6 text-primary-900 md:mx-auto md:max-w-full md:flex-row md:even:flex-row-reverse`}
     >
       <CardContent className="relative mb-6 p-0">
-        <Image
-          src={`/${props.name}.webp`}
+        <img
+          src={props.image}
           alt=""
           height={360}
           width={360}

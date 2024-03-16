@@ -1,8 +1,6 @@
 "use client";
-import { useEffect, useLayoutEffect, useState } from "react";
-
+import { useLayoutEffect, useState } from "react";
 import { navigation } from "@/constants";
-import Image from "next/image";
 
 export default function Navigation() {
   const [navReady, setNavReady] = useState(false);
@@ -46,10 +44,12 @@ export default function Navigation() {
         nav.classList.add("bg-primary-900");
         list.classList.remove("hidden");
         body.classList.add("overflow-hidden");
+        list.classList.add("h-screen");
       } else {
         nav.classList.remove("bg-primary-900");
         list.classList.add("hidden");
         body.classList.remove("overflow-hidden");
+        list.classList.remove("h-screen");
       }
     }
   };
@@ -91,11 +91,11 @@ export default function Navigation() {
   return (
     <nav
       id="navbar"
-      className="fixed top-0 z-40 h-screen w-screen md:sticky md:h-auto md:bg-primary-900"
+      className="fixed top-0 z-40 w-screen md:sticky md:h-auto md:bg-primary-900"
     >
       {navReady ? (
         <header className="fixed top-0 z-10 h-16 w-full border-b-[1px] border-white border-opacity-50 bg-primary-900">
-          <Image
+          <img
             src="/logo.webp"
             alt=""
             height={50}
@@ -107,7 +107,7 @@ export default function Navigation() {
       ) : null}
       <ul
         id="navbar__list"
-        className="m-auto mt-4 flex h-full w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex-row md:justify-around md:pl-0"
+        className="m-auto mt-4 flex w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex-row md:justify-around md:pl-0"
       >
         {navigation.map((item, index) => {
           return (
