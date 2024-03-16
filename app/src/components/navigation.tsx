@@ -1,4 +1,5 @@
 "use client";
+
 import { useLayoutEffect, useState } from "react";
 import { navigation } from "@/constants";
 
@@ -45,26 +46,21 @@ export default function Navigation() {
         list.classList.remove("hidden");
         body.classList.add("overflow-hidden");
         list.classList.add("h-screen");
+        list.classList.add("flex");
       } else {
         nav.classList.remove("bg-primary-900");
         list.classList.add("hidden");
         body.classList.remove("overflow-hidden");
         list.classList.remove("h-screen");
+        list.classList.remove("flex");
       }
     }
   };
 
   useLayoutEffect(() => {
-    if (window.innerWidth <= 840) {
-      document.getElementById("navbar__list")!.classList.add("hidden");
-      setNavReady(true);
-    } else setNavReady(false);
+    setNavReady(window.innerWidth <= 840);
   }, []);
 
-  /**
-   * Renders the burger menu icon for smaller screens.
-   * CSS only solution.
-   */
   const renderBurger = () => {
     return (
       <label htmlFor="burger__input" className="z-40">
@@ -107,7 +103,7 @@ export default function Navigation() {
       ) : null}
       <ul
         id="navbar__list"
-        className="m-auto mt-4 flex w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex-row md:justify-around md:pl-0"
+        className="m-auto mt-4 hidden w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex md:flex-row md:justify-around md:pl-0"
       >
         {navigation.map((item, index) => {
           return (
@@ -115,13 +111,13 @@ export default function Navigation() {
               <a
                 href={item.link}
                 onClick={() => {
+                  handleNavOpen(false);
                   const input = document.getElementById(
                     "burger__input",
                   )! as HTMLInputElement;
                   if (input) {
                     input.checked = false;
                   }
-                  handleNavOpen(false);
                 }}
               >
                 {item.title}

@@ -100,7 +100,8 @@ const team = [
   {
     name: "Hunter",
     className: "hunter",
-    quote: "Dutch Boy liking big things bark abrk bark bark bark bark bark",
+    quote:
+      "Dutch event organiser and furry trash. Loves to create special events all over Europe.",
     position: "Event Organiser",
     image: "/hunter.webp",
   },

@@ -6,9 +6,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-
 import { gallery } from "@/constants";
 
 export default function Gallery() {
