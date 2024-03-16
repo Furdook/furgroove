@@ -126,14 +126,15 @@ const team = [
     className: "arch",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
-    position: "Registration",
+    position: "Location Support",
     image: "/arch.webp",
   },
   {
     name: "Menos",
     className: "menos",
-    quote: "Bark bark bark bark bark bark bark bark bark bark bark bark",
-    position: "Huisdier",
+    quote:
+      "Helping you get into the venue and making you sure you stay, with killer vibes",
+    position: "Registration",
     image: "/menos.webp",
   },
 ];

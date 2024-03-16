@@ -10,7 +10,7 @@ export default function Artist(props: {
   return (
     <Card
       id={props.className}
-      className={`${props.className ? "team-member" : ""} flex max-w-[712px] flex-col gap-6 p-6 text-primary-900 md:mx-auto md:max-w-full md:flex-row md:even:flex-row-reverse`}
+      className={`${props.className ? "team-member" : ""} flex max-w-[712px] flex-col gap-6 text-primary-900 max-[935px]:px-6 md:mx-auto md:max-w-full md:flex-row md:even:flex-row-reverse`}
     >
       <CardContent className="relative mb-6 p-0">
         <img
