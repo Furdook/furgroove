@@ -22,13 +22,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <header className="mt-24">
-          <Image
-            src="/logo.webp"
-            alt="FurGroove"
-            width={700}
-            height={300}
-            className="mx-auto"
-          />
+          <a href="../">
+            <Image
+              src="/logo.webp"
+              alt="FurGroove"
+              width={700}
+              height={300}
+              className="mx-auto cursor-pointer transition-transform hover:scale-105"
+            />
+          </a>
           <h1 className="mt-4 text-center text-3xl uppercase tracking-wide">
             10th of August
           </h1>
@@ -48,13 +50,15 @@ export default function RootLayout({
           <Button className="mx-auto mb-24 w-64 text-xl font-medium">
             Website Archive
           </Button>
-          <Image
-            src="/logo.webp"
-            alt=""
-            height={100}
-            width={500}
-            className="mx-auto mb-12"
-          />
+          <a href="../">
+            <Image
+              src="/logo.webp"
+              alt=""
+              height={100}
+              width={500}
+              className="mx-auto mb-12 cursor-pointer transition-transform hover:scale-105"
+            />
+          </a>
         </footer>
       </body>
     </html>
