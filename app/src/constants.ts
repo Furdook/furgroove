@@ -1,28 +1,23 @@
 const gallery = [
   {
-    title: "T-shirt Design",
-    createdBy: "FurGroove",
-    image: "/mai.jpeg",
+    title: "Banner Art",
+    createdBy: "@Thlaylii",
+    image: "/banner.webp",
   },
   {
-    title: "T-shirt Design",
-    createdBy: "FurGroove",
-    image: "/hunter.jpg",
+    title: "Badge Design",
+    createdBy: "@Aviverine",
+    image: "/badge.webp",
   },
   {
-    title: "T-shirt Design",
-    createdBy: "FurGroove",
-    image: "/test.webp",
+    title: "Sticker Design",
+    createdBy: "@niveddoesart",
+    image: "/sticker.webp",
   },
   {
-    title: "T-shirt Design",
-    createdBy: "FurGroove",
-    image: "/hunter.jpg",
-  },
-  {
-    title: "T-shirt Design",
-    createdBy: "FurGroove",
-    image: "/hunter.jpg",
+    title: "Sticker Design 2",
+    createdBy: "@niveddoesart",
+    image: "/sticker2.webp",
   },
 ];
 
