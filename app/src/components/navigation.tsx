@@ -2,14 +2,15 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 
 import { navigation } from "@/constants";
+import Image from "next/image";
 
 export default function Navigation() {
   const [navReady, setNavReady] = useState(false);
 
   const handleUnderline = () => {
     const underscore = document.getElementById("navbar__underscore")!;
-    if (window.scrollY > 485 && window.innerWidth > 840) {
-      underscore.setAttribute("style", "opacity: 1;");
+    if (window.scrollY > 485) {
+      underscore.setAttribute("style", "opacity: 0.5;");
     } else {
       underscore.setAttribute("style", "opacity: 0;");
     }
@@ -66,7 +67,7 @@ export default function Navigation() {
    */
   const renderBurger = () => {
     return (
-      <label htmlFor="burger__input">
+      <label htmlFor="burger__input" className="z-40">
         <input
           id="burger__input"
           type="checkbox"
@@ -92,7 +93,18 @@ export default function Navigation() {
       id="navbar"
       className="fixed top-0 z-40 h-screen w-screen md:sticky md:h-auto md:bg-primary-900"
     >
-      {navReady ? renderBurger() : null}
+      {navReady ? (
+        <header className="fixed top-0 z-10 h-16 w-full border-b-[1px] border-white border-opacity-50 bg-primary-900">
+          <Image
+            src="/logo.webp"
+            alt=""
+            height={50}
+            width={200}
+            className="absolute inset-x-0 top-0 mx-auto h-auto"
+          />
+          {renderBurger()}
+        </header>
+      ) : null}
       <ul
         id="navbar__list"
         className="m-auto mt-4 flex h-full w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex-row md:justify-around md:pl-0"

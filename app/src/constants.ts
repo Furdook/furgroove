@@ -104,12 +104,14 @@ const tos = [
 const team = [
   {
     name: "Hunter",
+    className: "hunter",
     quote: "Dutch Boy liking big things bark abrk bark bark bark bark bark",
     position: "Event Organiser",
     image: "/hunter.jpg",
   },
   {
     name: "Mai Tai",
+    className: "maitai",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
     position: "Web Developer",
@@ -117,6 +119,7 @@ const team = [
   },
   {
     name: "Jay the Wolf",
+    className: "jay",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
     position: "Finance",
@@ -124,6 +127,7 @@ const team = [
   },
   {
     name: "Archomeda",
+    className: "arch",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
     position: "Registration",
@@ -131,6 +135,7 @@ const team = [
   },
   {
     name: "Menos",
+    className: "menos",
     quote: "Bark bark bark bark bark bark bark bark bark bark bark bark",
     position: "Huisdier",
     image: "/menos.webp",

@@ -130,3 +130,41 @@ a:hover {
   --_quote-clr: #77f2da;
   --_name-clr: #e25691;
 }
+
+.team-member > div > img {
+  border: 5px solid var(--_member-clr);
+}
+
+.team-member > div > div {
+  background-color: var(--_member-clr);
+}
+
+.team-member > p {
+  background-color: var(--_member-clr);
+}
+
+.team-member > div > h3 {
+  background-color: var(--_member-clr);
+  /* border: 2px solid var(--background); */
+  box-shadow: 1px 1px 3px var(--background);
+}
+
+#hunter {
+  --_member-clr: #eeae43;
+}
+
+#maitai {
+  --_member-clr: #e25691;
+}
+
+#jay {
+  --_member-clr: #77f2da;
+}
+
+#arch {
+  --_member-clr: #eeae43;
+}
+
+#menos {
+  --_member-clr: #e25691;
+}
