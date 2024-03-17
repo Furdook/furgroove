@@ -1,7 +1,7 @@
 export default function Location() {
   return (
     <section id="location" className="my-52 flex-wrap p-6">
-      <section id="location" className="my-52 flex-wrap p-6">
+      <section className="my-52 flex-wrap p-6">
         <p className="sm:max-w-[712px] mb-12 ml-0 max-w-[50ch] flex-grow self-start text-xl b:mr-auto">
           The location is <strong className="text-yellow">Boot3</strong> from
           BOOT10. A big party ship with several rooms to dance and relax during

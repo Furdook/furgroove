@@ -12,8 +12,8 @@ import { gallery } from "@/constants";
 export default function Gallery() {
   return (
     <main className="mx-auto flex max-w-4xl lg:w-screen">
-      <section className="mt-24 flex-wrap px-6 pt-6 lg:px-0">
-        <h1 className="w-full text-3xl text-pink">Gallery</h1>
+      <section className="flex-wrap px-6 pt-6 lg:px-0">
+        <h1 className="mb-6 w-full text-3xl text-pink">Gallery</h1>
         {gallery.map((item, index: any) => {
           return (
             <Dialog key={index}>

@@ -19,6 +19,11 @@ const gallery = [
     createdBy: "@niveddoesart",
     image: "/sticker2.webp",
   },
+  {
+    title: "Lanyard Design",
+    createdBy: "@imbluewisp",
+    image: "/lanyard.webp",
+  },
 ];
 
 const navigation = [
@@ -59,7 +64,8 @@ const tos = [
     content: [
       "You have to be at least 18 on the day of the party to attend.",
       "Only staff and registered attendees are allowed inside the location.",
-      "After ticket inspection you get a wristband. Losing this wristband means no more access!",
+      "Attendees are required to wear their badge and lanyard at all times during the party.",
+      "Badges need to be shown upon request by staff.",
     ],
   },
   {
@@ -76,17 +82,19 @@ const tos = [
     title: "Clothing and Decency",
     colour: "text-blue",
     content: [
-      "No bare genitals / buttocks, fake or real.",
+      "Nudity exceeding the equivalent of bathing suits is not allowed.",
       "Sexual behavior that goes beyond a mere display of affection is not allowed in public.",
-      "No floggers/paddles or other devices. Same goes for inflatables.",
+      "Display of fetish gear is not permitted in public, even if it is part of a costume.",
     ],
   },
   {
     title: "Drugs and Alcohol",
     colour: "text-pink",
-    content: `It is forbidden to bring or use drugs to the party.
-              If we find you in the possession of or distributing illegal or controlled substances we will notify the local authorities and the venue FORT33.
-              Smoking and vaping is only allowed in the designated smoking areas.`,
+    content: [
+      "It is forbidden to bring or use drugs to the party.",
+      "If we find you in the possession of or distributing illegal or controlled substances we will notify the local authorities and the venue FORT33.",
+      "Smoking and vaping is only allowed in the designated smoking areas.",
+    ],
   },
   {
     title: "Photography and Video",
@@ -117,15 +125,14 @@ const team = [
     name: "Jay the Wolf",
     className: "jay",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
+      "The good boy of the team. Always up for helping. Loves computer science and Vrchat.",
     position: "Finance",
     image: "/jay.webp",
   },
   {
     name: "Archomeda",
     className: "arch",
-    quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
+    quote: "They developed the website and all I got was this lousy quote",
     position: "Location Support",
     image: "/arch.webp",
   },
@@ -150,7 +157,7 @@ const artists = [
     name: "yellowstreak",
     image: "/yellowstreak.webp",
     quote:
-      "The one and only Dutch DJ Bird! Living close to the venue so it's almost like home. Loves to play all kinds of styles!",
+      "A German Husky and House DJ, known from the Partyboat at Hamburg, playing some House and Dance-Tunes for you.",
   },
   {
     name: "menos",
