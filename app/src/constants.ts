@@ -125,7 +125,7 @@ const team = [
     name: "Jay the Wolf",
     className: "jay",
     quote:
-      "The good boy of the team. Always up for helping. Loves computer science and Vrchat.",
+      "Dutch guy who loves to attend and organize furry events. Also a computer geek.",
     position: "Finance",
     image: "/jay.webp",
   },
