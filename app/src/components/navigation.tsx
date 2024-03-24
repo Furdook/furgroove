@@ -6,23 +6,8 @@ import { navigation } from "@/constants";
 export default function Navigation() {
   const [navReady, setNavReady] = useState(false);
 
-  const handleUnderline = () => {
-    const underscore = document.getElementById("navbar__underscore")!;
-    if (window.scrollY > 485) {
-      underscore.setAttribute("style", "opacity: 0.5;");
-    } else {
-      underscore.setAttribute("style", "opacity: 0;");
-    }
-  };
-
   if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
-      handleUnderline();
-    });
-
     window.addEventListener("resize", () => {
-      handleUnderline();
-
       const list = document.getElementById("navbar__list")!;
       handleNavOpen(false);
       if (window.innerWidth <= 840) {
@@ -87,10 +72,10 @@ export default function Navigation() {
   return (
     <nav
       id="navbar"
-      className="fixed top-0 z-40 w-screen md:sticky md:h-auto md:bg-primary-900"
+      className="fixed top-0 z-40 w-screen md:sticky md:h-auto md:bg-primary-900/70 md:backdrop-blur"
     >
       {navReady ? (
-        <header className="fixed top-0 z-10 h-16 w-full border-b-[1px] border-white border-opacity-50 bg-primary-900">
+        <header className="fixed top-0 z-10 h-16 w-full border-b-[1px] border-white border-opacity-50 bg-primary-900/70 backdrop-blur">
           <img
             src="/logo.webp"
             alt=""
@@ -103,7 +88,7 @@ export default function Navigation() {
       ) : null}
       <ul
         id="navbar__list"
-        className="m-auto mt-4 hidden w-full max-w-4xl flex-col justify-center gap-6 pl-6 pt-2 text-2xl uppercase tracking-wide md:my-4 md:flex md:flex-row md:justify-around md:pl-0"
+        className="m-auto mt-4 hidden w-full max-w-4xl flex-col justify-center gap-6 py-2 pl-6 text-2xl uppercase tracking-wide md:my-4 md:flex md:flex-row md:justify-around md:pl-0"
       >
         {navigation.map((item, index) => {
           return (
@@ -126,7 +111,6 @@ export default function Navigation() {
           );
         })}
       </ul>
-      <hr id="navbar__underscore" className="opacity-0 md:block" />
     </nav>
   );
 }
