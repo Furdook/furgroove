@@ -47,9 +47,11 @@ export function DesktopNavigation() {
   return (
     <nav className="sticky top-2 z-50 flex h-14 overflow-hidden rounded bg-primary-800/50 shadow-md backdrop-blur transition-transform duration-200 max-sm:hidden">
       <img
-        src="/branding/inline_small.webp"
+        src="/branding/inline_large.webp"
         alt="FurGroove logo"
-        className="avoid-contrast h-14"
+        width={224}
+        height={56}
+        className="avoid-contrast "
       />
       <ul className="mx-auto flex w-full max-w-lg flex-row place-content-around items-center text-xl uppercase">
         {navItems.map((item) => (

@@ -17,6 +17,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import Reveal from "./Reveal";
 
 export const formSchema = z.object({
   name: z.string(),
@@ -61,7 +62,7 @@ export default function Contact() {
   }
 
   return (
-    <>
+    <Reveal>
       {formSent ? (
         <div className="flex h-full w-full flex-col gap-2 rounded bg-primary-800/50 p-4 pb-8 shadow-md">
           <h2 className="text-yellow">Contact Us?</h2>
@@ -130,6 +131,6 @@ export default function Contact() {
           </form>
         </Form>
       )}
-    </>
+    </Reveal>
   );
 }

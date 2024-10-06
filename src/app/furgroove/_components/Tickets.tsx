@@ -1,8 +1,9 @@
+import Reveal from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
 
 export default function Tickets() {
   return (
-    <section className="h-full">
+    <Reveal>
       <h2 className="text-pink">Tickets</h2>
       <div className="mt-4 flex flex-col sm:flex-row">
         <section className="avoid-contrast flex flex-shrink-0 flex-col">
@@ -16,7 +17,7 @@ export default function Tickets() {
             variant="pink"
             className="w-[calc(100%-1rem)] rounded-inner hover:cursor-not-allowed max-sm:hidden"
           >
-            Purchase Ticket
+            Tickets Releasing Soon
           </Button>
         </section>
         <div className="ml-0 mt-4 flex w-full flex-row gap-4 sm:ml-auto sm:mt-0">
@@ -31,7 +32,7 @@ export default function Tickets() {
           Purchase Ticket
         </Button>
       </div>
-    </section>
+    </Reveal>
   );
 }
 
@@ -50,6 +51,8 @@ const Ticket = ({
         <img
           src={`/branding/${src}`}
           alt="FurGroove Logo"
+          width={84}
+          height={84}
           className="avoid-contrast mx-auto mt-4 w-2/3"
           loading="lazy"
         />

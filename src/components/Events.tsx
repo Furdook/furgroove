@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 interface IEvent {
   name: string;
   date: string;
@@ -35,14 +37,14 @@ const eventsList: IEvent[] = [
 
 export default function Events() {
   return (
-    <div className="relative ml-4">
+    <Reveal>
       <h2 className="text-blue">Events</h2>
       <section className="mt-16 flex flex-col gap-16 py-8 before:absolute before:top-16 before:ml-1 before:h-[95%] before:w-px before:rounded before:bg-primary-800 before:content-['']">
         {eventsList.map((event, index) => (
           <EventCard key={index} event={event} />
         ))}
       </section>
-    </div>
+    </Reveal>
   );
 }
 

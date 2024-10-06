@@ -1,14 +1,15 @@
+import Reveal from "@/components/Reveal";
 import { Carousel, Card } from "@/components/ui/cards";
 
 export default function Location() {
   const cards = data.map((card) => <Card key={card.src} card={card} />);
   return (
-    <section className="rounded">
+    <Reveal>
       <h2 className="ml-4 text-blue">Location</h2>
       <div className="h-full w-full">
         <Carousel items={cards} />
       </div>
-    </section>
+    </Reveal>
   );
 }
 

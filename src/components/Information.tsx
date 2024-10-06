@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Information() {
   return (
     <section className="flex w-full flex-col gap-4 rounded bg-primary-800/50 p-4 pb-8 shadow-md">

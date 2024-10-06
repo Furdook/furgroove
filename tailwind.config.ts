@@ -43,9 +43,6 @@ const config = {
       inner: "0.5rem",
     },
     extend: {
-      backgroundImage: {
-        hero: "url('/cover_image.webp')",
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

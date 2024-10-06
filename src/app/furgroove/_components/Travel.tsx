@@ -1,13 +1,18 @@
+import Reveal from "@/components/Reveal";
+
 export default function Travel() {
   return (
-    <section className="w-full rounded">
+    <Reveal>
       <h2 className="text-yellow">Travel</h2>
       <div className="mt-4 flex w-full flex-col gap-4">
         <section className="flex flex-grow flex-col gap-4 sm:flex-row">
           <img
             src="/event/map.webp"
-            alt=""
-            className="rounded shadow-md sm:w-1/3"
+            alt="Map of the Event Location"
+            width={256}
+            height={256}
+            loading="lazy"
+            className="rounded shadow-md sm:w-1/3 w-full"
           />
           <div
             className="flex flex-col rounded bg-primary-800/50 p-4 shadow-md sm:w-2/3"
@@ -59,17 +64,21 @@ export default function Travel() {
             <a
               href="https://www.hotelleusden.nl/"
               className="hover:cursor-alias"
+              aria-label="Van Der Valk Hotel"
               target="_blank"
             >
               <img
                 src="/event/vanderwalk.webp"
-                alt=""
+                alt="Picture of Van Der Valk Hotel"
+                width={256}
+                height={256}
+                loading="lazy"
                 className="mt-2 w-full rounded-inner"
               />
             </a>
           </div>
         </section>
       </div>
-    </section>
+    </Reveal>
   );
 }

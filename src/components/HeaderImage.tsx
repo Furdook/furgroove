@@ -1,10 +1,12 @@
 export default function HeaderImage() {
   return (
     <img
-      src="/branding/inline_small.webp"
+      src="/branding/inline_large.webp"
       id="logoSmall"
       alt="FurGroove logo"
-      className="avoid-contrast z-50 mt-2 h-14 w-fit sm:hidden"
+      width={224}
+      height={56}
+      className="avoid-contrast ml-[-0.6rem] z-50 mt-2 sm:hidden"
     />
   );
 }

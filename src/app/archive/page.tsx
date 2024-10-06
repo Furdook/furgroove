@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import HeaderImage from "@/components/HeaderImage";
+import Reveal from "@/components/Reveal";
 
 type ArchiveItem = {
   title: string;
@@ -39,10 +40,14 @@ export default function Home() {
         <HeaderImage />
         <Breadcrumb currentPage="Archive" />
       </header>
-      <h2 className="ml-4 text-pink">Archive</h2>
-      {archiveItems.map((item) => (
-        <Card key={item.title} archivedEvent={item} />
-      ))}
+      <Reveal>
+        <div className="flex flex-col gap-4">
+          <h2 className="ml-4 text-pink">Archive</h2>
+          {archiveItems.map((item) => (
+            <Card key={item.title} archivedEvent={item} />
+          ))}
+        </div>
+      </Reveal>
     </main>
   );
 }
@@ -72,7 +77,7 @@ function Card({ archivedEvent }: { archivedEvent: ArchiveItem }) {
         })}
       </div>
       <div className="flex gap-4">
-        <p className="mt-auto flex gap-2 text-lg text-primary-300/50">
+        <p className="mt-auto flex gap-2 text-lg text-primary-300/60">
           {archivedEvent.location}
         </p>
         <a

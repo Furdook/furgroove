@@ -64,7 +64,7 @@ export const Card = ({ card }: { card: Card }) => {
       </div>
       <img
         src={card.src}
-        alt={card.description}
+        alt={card.description || card.title}
         className={`absolute inset-0 z-10 h-full rounded object-cover shadow-md`}
         loading="lazy"
       />

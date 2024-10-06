@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import HeaderImage from "@/components/HeaderImage";
+import Reveal from "@/components/Reveal";
 import {
   Dialog,
   DialogContent,
@@ -17,12 +18,14 @@ export default function Home() {
         <HeaderImage />
         <Breadcrumb currentPage="Gallery" />
       </header>
-      <h2 className="ml-4 text-pink">Gallery</h2>
-      <section className="flex flex-wrap gap-4">
-        {items.map((item) => {
-          return <GalleryItem key={item.title} {...item} />;
-        })}
-      </section>
+      <Reveal>
+        <h2 className="ml-4 mb-4 text-pink">Gallery</h2>
+        <section className="flex flex-wrap gap-4">
+          {items.map((item) => {
+            return <GalleryItem key={item.title} {...item} />;
+          })}
+        </section>
+      </Reveal>
     </main>
   );
 }
@@ -35,75 +38,59 @@ type Item = {
 
 const items: Item[] = [
   {
-    title: "Mai Tai",
-    artist: "my mum",
-    src: "/furries/mai.webp",
+    title: "Sticker Design",
+    artist: "@niveddoesart",
+    src: "/gallery/sticker.webp",
   },
   {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
+    title: "Sticker Design",
+    artist: "@niveddoesart",
+    src: "/gallery/sticker-2.webp",
   },
   {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
+    title: "Banner Art",
+    artist: "@Thlaylii",
+    src: "/gallery/banner.webp",
   },
   {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
+    title: "Lanyard Design",
+    artist: "@imbluewisp",
+    src: "/gallery/lanyard.webp",
   },
   {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
-  },
-  {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
-  },
-  {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
-  },
-  {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
-  },
-  {
-    title: "Something",
-    artist: "Someone",
-    src: "/404.webp",
+    title: "Badge Design",
+    artist: "@Aviverine",
+    src: "/gallery/badge.webp",
   },
 ];
 
 function GalleryItem(item: Item) {
   return (
     <Dialog>
-      <DialogTrigger className="aspect-square w-full rounded bg-primary-800 sm:w-[calc(100%/2-0.5rem)] md:w-[calc(100%/3-2rem/3)]">
+      <DialogTrigger className="aspect-square w-full rounded bg-primary-800 sm:w-[calc(100%/2-0.5rem)] md:w-[calc(100%/3-2rem/3)] sm:hover:scale-105 transition-transform duration-200 hover:cursor-zoom-in">
         <img
           src={item.src}
           alt={item.title}
-          className="h-full rounded object-cover"
+          width={300}
+          height={300}
+          className="h-full w-full rounded object-cover"
           loading="lazy"
         />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{item.title}</DialogTitle>
+          <DialogTitle className="pb-2">{item.title}</DialogTitle>
           <DialogDescription>
             <img
               src={item.src}
               alt={item.title}
+              width={600}
+              height={600}
               className="rounded-inner"
               loading="lazy"
             />
           </DialogDescription>
-          <DialogFooter>Created by {item.artist}</DialogFooter>
+          <DialogFooter className="pt-2">Created by {item.artist}</DialogFooter>
         </DialogHeader>
       </DialogContent>
     </Dialog>

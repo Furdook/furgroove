@@ -4,23 +4,33 @@ import Travel from "./_components/Travel";
 import Tickets from "./_components/Tickets";
 import Artists from "./_components/Artists";
 import Breadcrumb from "@/components/Breadcrumb";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-32">
+    <div className="flex flex-col">
       <Breadcrumb currentPage="FurGroove" />
-      <section className="mt-[-14.75rem] flex h-screen rounded bg-hero bg-center sm:mt-[-15.25rem]">
-        <img
-          src="/branding/inline_large.webp"
-          alt="FurGroove logo"
-          className="avoid-contrast mx-auto my-auto"
-        />
-      </section>
-      <Information />
-      <Location />
-      <Travel />
-      <Tickets />
-      <Artists />
-    </main>
+      <Reveal>
+        <section className="flex h-[calc(100svh-8rem)] relative">
+          <img
+            src="/backdrop.webp"
+            role="presentation"
+            className="object-center object-cover w-full"
+          />
+          <img
+            src="/vectors/lined_with_head.svg"
+            alt="FurGroove logo"
+            className="absolute inset-0 w-4/5 left-1/2 max-sm:top-1/2 -translate-y-1/2 sm:bottom-1/2 -translate-x-1/2  sm:translate-y-2/3"
+          />
+        </section>
+      </Reveal>
+      <main className="flex flex-col gap-32 mt-32">
+        <Information />
+        <Location />
+        <Travel />
+        <Tickets />
+        <Artists />
+      </main>
+    </div>
   );
 }

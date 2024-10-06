@@ -3,6 +3,7 @@ import Information from "@/components/Information";
 import Code from "./_components/Code";
 import Team from "./_components/Team";
 import HeaderImage from "@/components/HeaderImage";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -11,9 +12,13 @@ export default function Home() {
         <HeaderImage />
         <Breadcrumb currentPage="About" />
       </header>
-      <Information />
-      <Code />
-      <Team />
+      <Reveal>
+        <div className="flex flex-col gap-4">
+          <Information />
+          <Code />
+          <Team />
+        </div>
+      </Reveal>
     </main>
   );
 }
