@@ -32,7 +32,7 @@ const data = [
   {
     title: "Vaelken",
     description: "Internal Coordinator",
-    src: "/furries/ryan.png",
+    src: "/furries/vaelken.webp",
   },
   {
     title: "Menos",
