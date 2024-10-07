@@ -1,6 +1,7 @@
+"use client";
 import Breadcrumb from "@/components/Breadcrumb";
 import HeaderImage from "@/components/HeaderImage";
-import Reveal from "@/components/Reveal";
+import { motion } from "framer-motion";
 
 type ArchiveItem = {
   title: string;
@@ -40,23 +41,43 @@ export default function Home() {
         <HeaderImage />
         <Breadcrumb currentPage="Archive" />
       </header>
-      <Reveal>
-        <div className="flex flex-col gap-4">
-          <h2 className="ml-4 text-pink">Archive</h2>
-          {archiveItems.map((item) => (
-            <Card key={item.title} archivedEvent={item} />
-          ))}
-        </div>
-      </Reveal>
+      <div className="flex flex-col gap-4">
+        <h2 className="ml-4 text-pink">Archive</h2>
+        {archiveItems.map((item, index) => (
+          <Card key={item.title} archivedEvent={item} index={index} />
+        ))}
+      </div>
     </main>
   );
 }
 
 import { Image } from "lucide-react";
 
-function Card({ archivedEvent }: { archivedEvent: ArchiveItem }) {
+function Card({
+  archivedEvent,
+  index,
+}: {
+  archivedEvent: ArchiveItem;
+  index: number;
+}) {
   return (
-    <section className="rounded bg-primary-800/50 p-4 shadow-md">
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4,
+          delay: 0.1 * index,
+          ease: "easeOut",
+          once: true,
+        },
+      }}
+      className="rounded bg-primary-800/50 p-4 shadow-md"
+    >
       <h3 className="text-xl font-light uppercase text-blue">
         {archivedEvent.title}
       </h3>
@@ -88,6 +109,6 @@ function Card({ archivedEvent }: { archivedEvent: ArchiveItem }) {
           Picture Gallery
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }

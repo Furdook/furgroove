@@ -27,12 +27,7 @@ const data = [
   {
     title: "Mayk",
     description: "Entertainment & Artist Relations",
-    src: "/furries/beatbird.webp",
-  },
-  {
-    title: "Vaelken",
-    description: "Internal Coordinator",
-    src: "/furries/vaelken.webp",
+    src: "/furries/mayk.webp",
   },
   {
     title: "Menos",
@@ -40,9 +35,14 @@ const data = [
     src: "/furries/menos.webp",
   },
   {
+    title: "Vaelken",
+    description: "Internal Coordinator",
+    src: "/furries/vaelken.webp",
+  },
+  {
     title: "Ryan",
     description: "Fursuit Lounge",
-    src: "/furries/ryan.png",
+    src: "/furries/ryan.webp",
   },
   {
     title: "Jay",

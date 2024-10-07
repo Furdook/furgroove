@@ -30,6 +30,7 @@ p {
   line-height: 1.5rem;
 }
 
+/* Will be removed */
 body:has(.afterdark) {
   background-color: #131316;
   color: #eff2ff;
@@ -44,18 +45,6 @@ body:has(.afterdark) {
 
   & footer {
     background-color: #1c1c21;
-  }
-}
-
-@media (prefers-contrast: more) {
-  * {
-    color: white;
-  }
-  section:not(.avoid-contrast),
-  nav:not(.avoid-contrast),
-  footer:not(.avoid-contrast),
-  img:not(.avoid-contrast) {
-    outline: 1px solid #fff;
   }
 }
 

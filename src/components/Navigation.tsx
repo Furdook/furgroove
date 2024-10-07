@@ -51,7 +51,6 @@ export function DesktopNavigation() {
         alt="FurGroove logo"
         width={224}
         height={56}
-        className="avoid-contrast "
       />
       <ul className="mx-auto flex w-full max-w-lg flex-row place-content-around items-center text-xl uppercase">
         {navItems.map((item) => (

@@ -6,7 +6,7 @@ export default function Tickets() {
     <Reveal>
       <h2 className="text-pink">Tickets</h2>
       <div className="mt-4 flex flex-col sm:flex-row">
-        <section className="avoid-contrast flex flex-shrink-0 flex-col">
+        <section className="flex flex-shrink-0 flex-col">
           <div className="my-auto">
             <h3 className="text-xl">Your ticket to FurGroove</h3>
             <p className="pr-4 text-primary-300/50">
@@ -53,7 +53,7 @@ const Ticket = ({
           alt="FurGroove Logo"
           width={84}
           height={84}
-          className="avoid-contrast mx-auto mt-4 w-2/3"
+          className="mx-auto mt-4 w-2/3"
           loading="lazy"
         />
         <h4 className="mx-auto mb-2 mt-auto truncate text-xl uppercase max-[420px]:text-xs sm:max-md:text-sm">

@@ -9,7 +9,7 @@ export default function Information() {
       >
         <img
           src="/event/cutout.webp"
-          className="avoid-contrast absolute right-0 top-0 h-full"
+          className="absolute right-0 top-0 h-full"
           alt="FurGroove art"
         />
         <div className="z-10 h-full max-md:bg-primary-900/50 max-md:p-4 max-md:backdrop-blur">

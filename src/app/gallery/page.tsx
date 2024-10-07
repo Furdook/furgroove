@@ -1,6 +1,7 @@
+"use client";
 import Breadcrumb from "@/components/Breadcrumb";
 import HeaderImage from "@/components/HeaderImage";
-import Reveal from "@/components/Reveal";
+import { motion } from "framer-motion";
 import {
   Dialog,
   DialogContent,
@@ -18,14 +19,12 @@ export default function Home() {
         <HeaderImage />
         <Breadcrumb currentPage="Gallery" />
       </header>
-      <Reveal>
-        <h2 className="ml-4 mb-4 text-pink">Gallery</h2>
-        <section className="flex flex-wrap gap-4">
-          {items.map((item) => {
-            return <GalleryItem key={item.title} {...item} />;
-          })}
-        </section>
-      </Reveal>
+      <h2 className="ml-4 mb-4 text-pink">Gallery</h2>
+      <section className="flex flex-wrap gap-4">
+        {items.map((item, index: number) => {
+          return <GalleryItem key={item.title} index={index} item={item} />;
+        })}
+      </section>
     </main>
   );
 }
@@ -64,11 +63,25 @@ const items: Item[] = [
   },
 ];
 
-function GalleryItem(item: Item) {
+function GalleryItem({ item, index }: { item: Item; index: number }) {
   return (
     <Dialog>
-      <DialogTrigger className="aspect-square w-full rounded bg-primary-800 sm:w-[calc(100%/2-0.5rem)] md:w-[calc(100%/3-2rem/3)] sm:hover:scale-105 transition-transform duration-200 hover:cursor-zoom-in">
-        <img
+      <DialogTrigger className="aspect-square w-full  sm:w-[calc(100%/2-0.5rem)] md:w-[calc(100%/3-2rem/3)] sm:hover:scale-105 transition-transform duration-200 hover:cursor-zoom-in">
+        <motion.img
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.4,
+              delay: 0.1 * index,
+              ease: "easeOut",
+              once: true,
+            },
+          }}
           src={item.src}
           alt={item.title}
           width={300}
