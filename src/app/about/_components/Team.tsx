@@ -1,15 +1,14 @@
-import Reveal from "@/components/Reveal";
 import { Carousel, Card } from "@/components/ui/cards";
 
 export default function Team() {
   const cards = data.map((card) => <Card key={card.src} card={card} />);
   return (
-    <Reveal>
-      <h2 className="ml-4 text-yellow">Meet the team</h2>
+    <>
+      <h2 className="ml-4 mt-4 text-yellow">Meet the team</h2>
       <div className="h-full w-full">
         <Carousel items={cards} />
       </div>
-    </Reveal>
+    </>
   );
 }
 

@@ -1,3 +1,4 @@
+import Announcement from "@/components/Announcement";
 import Contact from "@/components/Contact";
 import Events from "@/components/Events";
 import Information from "@/components/Information";
@@ -5,7 +6,7 @@ import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-32 overflow-clip">
+    <main className="flex flex-col gap-32">
       <Reveal>
         <section className="flex h-[calc(100svh-8rem)] relative">
           <img

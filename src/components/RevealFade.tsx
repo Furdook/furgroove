@@ -17,7 +17,7 @@ export default function RevealFade({ children }: RevealProps) {
     }
   }, [isInView]);
   return (
-    <div className="relative w-full overflow-hidden" ref={ref}>
+    <div className="relative w-full" ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0 },

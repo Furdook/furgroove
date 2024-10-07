@@ -1,5 +1,3 @@
-"use client";
-
 import RevealFade from "./RevealFade";
 
 export default function Footer() {

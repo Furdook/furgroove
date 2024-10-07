@@ -18,7 +18,8 @@ const tos = [
     content: [
       "You have to be at least 18 on the day of the party to attend.",
       "Only staff and registered attendees are allowed inside the location.",
-      "After ticket inspection you get a wristband. Losing this wristband means no more access!",
+      "Attendees are required to wear their badge and lanyard at all times during the party.",
+      "Badges need to be shown upon request by staff.",
     ],
   },
   {
@@ -33,15 +34,15 @@ const tos = [
   {
     title: "Clothing and Decency",
     content: [
-      "No bare genitals / buttocks, fake or real.",
+      "Nudity exceeding the equivalent of bathing suits is not allowed.",
       "Sexual behavior that goes beyond a mere display of affection is not allowed in public.",
-      "No floggers/paddles or other devices. Same goes for inflatables.",
+      "Display of fetish gear is not permitted in public, even if it is part of a costume.",
     ],
   },
   {
     title: "Drugs and Alcohol",
     content: `It is forbidden to bring or use drugs to the party.
-              If we find you in the possession of or distributing illegal or controlled substances we will notify the local authorities and the venue FORT33.
+              If we find you in the possession of or distributing illegal or controlled substances we will notify the local authorities and the venue.
               Smoking and vaping is only allowed in the designated smoking areas.`,
   },
   {
@@ -85,7 +86,9 @@ export default function Code() {
         tos.map((item, index) => {
           return (
             <AccordionItem value={index.toString()} key={index}>
-              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionTrigger className="text-lg">
+                {item.title}
+              </AccordionTrigger>
               <AccordionContent className="leading-8">
                 {
                   /**
@@ -93,7 +96,7 @@ export default function Code() {
                    * If it is an array, it will be rendered as a list of bullet points
                    */
                   typeof item.content === "string" ? (
-                    item.content
+                    <p className="leading-8">{item.content}</p>
                   ) : (
                     <ul className="pl-6 text-pink">
                       {item.content.map((bulletPoint, index) => {
