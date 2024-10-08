@@ -54,8 +54,13 @@ export function DesktopNavigation() {
       />
       <ul className="mx-auto flex w-full max-w-lg flex-row place-content-around items-center text-xl uppercase">
         {navItems.map((item) => (
-          <li key={item.text} className="hover:cursor-pointer">
-            <a href={item.link.toLowerCase()}>{item.text}</a>
+          <li
+            key={item.text}
+            className="hover:cursor-pointer  nav-selector h-full w-full md:px-4 px-2 content-center justify-normal text-center"
+          >
+            <a className="path" href={item.link.toLowerCase()}>
+              {item.text}
+            </a>
           </li>
         ))}
       </ul>
@@ -70,10 +75,11 @@ export function MobileNavigation() {
         {navItems.map((item) => (
           <li
             key={item.text}
-            tabIndex={1}
-            className="w-1/4 place-content-center rounded-inner hover:cursor-pointer hover:bg-primary-900/50"
+            className="w-1/4 place-content-center rounded-inner hover:cursor-pointer transition-colors duration-200 hover:bg-primary-900/50"
           >
-            <a href={item.link.toLowerCase()}>{item.icon}</a>
+            <a href={item.link.toLowerCase()} aria-label={item.text}>
+              {item.icon}
+            </a>
           </li>
         ))}
       </ul>
