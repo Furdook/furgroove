@@ -1,8 +1,8 @@
-import RevealFade from "./RevealFade";
+import Reveal from "./Reveal";
 
 export default function Footer() {
   return (
-    <RevealFade>
+    <Reveal>
       <footer className="mb-8 mt-4 rounded bg-primary-800/50 p-4 shadow-md">
         <img
           src="/branding/inline_large.webp"
@@ -43,6 +43,6 @@ export default function Footer() {
           </section>
         </div>
       </footer>
-    </RevealFade>
+    </Reveal>
   );
 }

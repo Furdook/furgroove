@@ -29,7 +29,7 @@ export default function Tickets() {
           variant="pink"
           className="mt-4 w-full rounded-inner sm:mt-0 sm:hidden sm:w-48"
         >
-          Purchase Ticket
+          Tickets Releasing Soon
         </Button>
       </div>
     </Reveal>

@@ -1,16 +1,17 @@
 import Reveal from "./Reveal";
-
 interface IEvent {
   name: string;
   date: string;
   path: string;
   colour: string;
   description: string;
+  location: string;
 }
 
 const eventsList: IEvent[] = [
   {
     name: "FurGroove: AD Edition",
+    location: "Leusden",
     date: "POSTPONED",
     path: "/afterdark",
     colour: "yellow",
@@ -19,6 +20,7 @@ const eventsList: IEvent[] = [
   },
   {
     name: "FurGroove",
+    location: "Leusden",
     date: "January 25th 2025",
     path: "/furgroove",
     colour: "pink",
@@ -27,6 +29,7 @@ const eventsList: IEvent[] = [
   },
   {
     name: "FurGroove",
+    location: "TBA",
     date: "TO BE ANNOUCED",
     path: "/",
     colour: "blue",
@@ -37,41 +40,54 @@ const eventsList: IEvent[] = [
 
 export default function Events() {
   return (
-    <Reveal>
+    <div>
       <h2 className="text-blue">Events</h2>
-      <section className="mt-16 flex flex-col gap-16 py-8 before:absolute before:top-16 before:ml-1 before:h-[95%] before:w-px before:rounded before:bg-primary-800 before:content-['']">
+      <section id="Skip" className="grid gap-4 py-8">
         {eventsList.map((event, index) => (
-          <EventCard key={index} event={event} />
+          <EventCard key={index} event={event} index={index} />
         ))}
       </section>
-    </Reveal>
+    </div>
   );
 }
 
-function EventCard({ event }: { event: IEvent }) {
+function EventCard({ event, index }: { event: IEvent; index: number }) {
   return (
-    <section id="Skip" className="relative flex flex-col gap-8 md:flex-row">
-      <div
-        className={`${event.colour} my-auto min-w-60 before:absolute before:top-1/2 before:h-2 before:w-2 before:rounded-inner before:content-['']`}
-      >
-        <h3 className="ml-8 text-nowrap uppercase">{event.name}</h3>
-        <h4 className="ml-8 text-nowrap font-light text-primary-300/75">
-          {event.date}
-        </h4>
-      </div>
-      <article
-        className={`${event.colour} flex-grow-0 before:absolute before:h-1 before:w-full before:rounded-inner before:content-[''] max-md:before:ml-8 max-md:before:mt-[-1rem] md:before:h-full md:before:w-1`}
-      >
-        <p className={`ml-8 pb-4 ${event.path === "/" ? "blur-sm" : ""}`}>
-          {event.description}
-        </p>
-        <a
-          href={event.path}
-          className={`path ml-8 rounded-inner bg-primary-800/50 px-8 py-2.5 shadow-md transition-colors duration-200 hover:bg-primary-800 ${event.path === "/" ? "hover:cursor-not-allowed" : ""}`}
+    <Reveal>
+      <section className="relative flex flex-col md:gap-8 md:flex-row">
+        <div className="bg-primary-800 h-[calc(100%+1rem)] w-px left-1 absolute hidden sm:block"></div>
+        <div
+          className={`${event.colour} hidden sm:block my-auto min-w-60 before:absolute before:top-1/2 before:h-2 before:w-2 before:rounded-inner md:before:content-['']`}
         >
-          {event.path === "/" ? "Coming Soon" : "Go to event"}
-        </a>
-      </article>
-    </section>
+          <h3 className="ml-8 max-md:hidden text-nowrap uppercase">
+            {event.name}
+          </h3>
+          <h4 className="ml-8 max-md:hidden text-nowrap font-light text-primary-300/75">
+            {event.date}
+          </h4>
+        </div>
+
+        <div className="rounded max-md:bg-primary-800/50 max-md:shadow-md p-4 sm:max-md:ml-6 flex flex-col">
+          <div
+            className={`absolute w-full max-md:hidden max-md:top-[3.5rem] h-1 md:h-5/6 md:w-1 rounded md:left-64 ${event.colour === "pink" ? "bg-pink" : event.colour === "yellow" ? "bg-yellow" : "bg-blue"}`}
+          ></div>
+          <h3 className="md:hidden text-nowrap uppercase">{event.name}</h3>
+          <h4 className="md:hidden pb-4 text-nowrap font-light text-primary-300/75">
+            {event.date}
+          </h4>
+          <p className={`pb-4 ${event.path === "/" ? "blur-sm" : ""}`}>
+            {event.description}
+          </p>
+          <div className="flex">
+            <a
+              href={event.path}
+              className={`path rounded-inner bg-primary-800/50 max-md:hover:opacity-60 md:hover:text-primary-900 text-primary-900 md:text-primary-300 w-fit px-8 py-2 shadow-md transition-colors duration-200  ${event.path === "/" ? "hover:cursor-not-allowed" : ""} ${event.colour === "yellow" ? "md:hover:bg-yellow max-md:bg-yellow" : event.colour === "pink" ? "md:hover:bg-pink max-md:bg-pink" : "md:hover:bg-blue max-md:bg-blue"}`}
+            >
+              {event.path === "/" ? "Coming Soon" : "Go to event"}
+            </a>
+          </div>
+        </div>
+      </section>
+    </Reveal>
   );
 }

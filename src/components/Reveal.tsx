@@ -6,7 +6,7 @@ type RevealProps = {
   children: React.ReactNode;
 };
 
-export default function Reveal({ children }: RevealProps) {
+export default function RevealFade({ children }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
   const control = useAnimation();
@@ -17,11 +17,11 @@ export default function Reveal({ children }: RevealProps) {
     }
   }, [isInView]);
   return (
-    <div className="relative w-full overflow-hidden" ref={ref}>
+    <div className="relative w-full" ref={ref}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
         }}
         initial="hidden"
         animate={control}

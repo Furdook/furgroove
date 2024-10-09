@@ -1,4 +1,3 @@
-import Announcement from "@/components/Announcement";
 import Contact from "@/components/Contact";
 import Events from "@/components/Events";
 import Information from "@/components/Information";

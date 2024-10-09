@@ -47,7 +47,7 @@ export function PlaceholdersAndVanishInput({
     <section
       className={cn(
         "relative mx-auto w-full transition duration-100",
-        inputValue
+        inputValue,
       )}
     >
       <label htmlFor="shuffle-input" className="sr-only">

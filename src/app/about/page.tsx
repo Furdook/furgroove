@@ -3,7 +3,7 @@ import Information from "@/components/Information";
 import Code from "./_components/Code";
 import Team from "./_components/Team";
 import HeaderImage from "@/components/HeaderImage";
-import RevealFade from "@/components/RevealFade";
+import RevealFade from "@/components/Reveal";
 
 export default function Home() {
   return (
