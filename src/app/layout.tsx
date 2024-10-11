@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "FurGroove",
-  description: "The Furry Event Organisers",
+  description:
+    "Events made by furries for furries. We host different events throughout the year ranging from regular dance parties to 18+ events. Whether you wanna dance along to our DJ’s, have a drink with your friends or strut around in your fursuit Furgroove has something for everyone to enjoy!",
 };
 
 export default function RootLayout({

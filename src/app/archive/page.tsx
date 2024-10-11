@@ -14,7 +14,7 @@ type ArchiveItem = {
 
 const archiveItems: ArchiveItem[] = [
   {
-    title: "FurGroove: Set Sail",
+    title: "FurGroove: Sets Sail",
     date: "10th of August 2024",
     description:
       "This event was hosted crusing through the canals of Rotterdam on a boat from BOOT10, the trip lasted for four hours exploring the canals as fluffy as possible. With over 200 attendees, many in fursuits, this was the place to be!",

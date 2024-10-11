@@ -20,11 +20,11 @@ export default function Home() {
         <Breadcrumb currentPage="Gallery" />
       </header>
       <h2 className="ml-4 mb-4 text-pink">Gallery</h2>
-      <section className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4">
         {items.map((item, index: number) => {
           return <GalleryItem key={item.title} index={index} item={item} />;
         })}
-      </section>
+      </div>
     </main>
   );
 }

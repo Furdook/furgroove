@@ -13,24 +13,18 @@ export default function Tickets() {
               Tickets for this event come in three tiers
             </p>
           </div>
-          <Button
-            variant="pink"
-            className="w-[calc(100%-1rem)] rounded-inner hover:cursor-not-allowed max-sm:hidden"
-          >
-            Tickets Releasing Soon
-          </Button>
+          <a className="w-[calc(100%-1rem)] path hover:cursor-pointer bg-pink py-2 hover:bg-pink/80 text-primary-900 px-1.5 text-center hover:text-primary-900 rounded-inner max-sm:hidden">
+            Purchase Tickets
+          </a>
         </section>
         <div className="ml-0 mt-4 flex w-full flex-row gap-4 sm:ml-auto sm:mt-0">
           <Ticket tier="Early Bird" price="20" src="icon_yellow.webp" />
           <Ticket tier="Standard" price="25" src="icon_blue.webp" />
           <Ticket tier="Late Bird" price="30" src="icon_pink.webp" />
         </div>
-        <Button
-          variant="pink"
-          className="mt-4 w-full rounded-inner sm:mt-0 sm:hidden sm:w-48"
-        >
-          Tickets Releasing Soon
-        </Button>
+        <a className="mt-4 w-full path bg-pink py-2 rounded-inner text-primary-900 text-center hover:bg-pink/80 hover:text-primary-900 px-1.5 sm:mt-0 sm:hidden sm:w-48">
+          Purchase Tickets
+        </a>
       </div>
     </Reveal>
   );

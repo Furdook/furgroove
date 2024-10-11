@@ -19,7 +19,7 @@ type Card = {
 export const Carousel = ({ items }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
   return (
-    <section className="relative w-full">
+    <div className="relative w-full">
       <div
         className="scrollbar flex w-full overflow-x-scroll scroll-smooth py-6"
         ref={carouselRef}
@@ -49,13 +49,16 @@ export const Carousel = ({ items }: CarouselProps) => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export const Card = ({ card }: { card: Card }) => {
   return (
-    <motion.div className="group relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded shadow-md transition-transform duration-200 hover:-translate-y-2 md:h-[30rem] md:w-80">
+    <motion.div
+      tabIndex={0}
+      className="group relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded shadow-md transition-transform duration-200 hover:-translate-y-2 md:h-[30rem] md:w-80"
+    >
       <div className="relative z-40 h-36 w-full bg-primary-800/50 p-8 backdrop-blur duration-200 group-hover:opacity-0">
         <motion.p className="text-md uppercase">{card.title}</motion.p>
         <motion.p className="text-md mt-2 max-w-xs font-semibold sm:text-lg md:text-2xl">

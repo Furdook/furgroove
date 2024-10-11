@@ -16,13 +16,18 @@ export default function Information() {
           <h1 className="text-pink">FurGroove</h1>
           <h2 className="mb-6 text-xl text-primary-300/85">25th of January</h2>
           <p className="pb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            Aspernatur ut saepe eaque delectus ipsa consectetur <br />
-            sint aliquam sunt pariatur blanditiis? Aliquam <br />
-            magnam expedita ea quod adipisci facilis <br />
-            culpa esse ex. <br />
+            After the great success of FurGroove and FurGroove: Sets Sail,
             <br />
-            Four Seasons Leusden Welcomes us!
+            it is time for the next edition of FurGroove! Be prepared to
+            <br />
+            move your paws on our vibrant and spacious dance floor
+            <br />
+            with great music by our DJs at our stunning venue:
+            <br />
+            Four Seasons Leusden.
+            <br />
+            <br />
+            Warm up your paws, and get your tickets now!
           </p>
         </div>
       </section>

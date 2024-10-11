@@ -16,23 +16,25 @@ export default function Location() {
 const data = [
   {
     title: "Bar",
+    description: "Get a drink from our scenic bar",
     src: "/event/venue_4.webp",
     location: true,
   },
   {
     title: "Lounge area",
-    description: "With Plentry of Seating",
+    description: "Recharge and get ready for more fun",
     src: "/event/venue_1.webp",
     location: true,
   },
   {
-    title: "Bar",
+    title: "Meet new furries",
+    description: "Make the night unforgettable",
     src: "/event/venue_2.webp",
     location: true,
   },
   {
     title: "Dance Floor",
-    description: "All the Space You'll Need",
+    description: "Own the night on our vibrant dance floor",
     src: "/event/venue_3.webp",
     location: true,
   },

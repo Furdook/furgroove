@@ -12,13 +12,13 @@ export default function Footer() {
           className="mb-4 ml-[-1.5rem]"
         />
         <div className="flex flex-row gap-4">
-          <section className="flex w-full flex-col">
+          <div className="flex w-full flex-col">
             <a href="">Telegram Group</a>
             <a href="">Telegram Announcements</a>
-            <section className="mt-4 flex flex-col md:mt-auto md:flex-row md:gap-4">
-              <p className="mt-4 text-primary-300/60 max-md:order-3">
+            <div className="mt-4 flex flex-col md:mt-auto md:flex-row md:gap-4">
+              {/*  <p className="mt-4 text-primary-300/60 max-md:order-3">
                 org.no.123.456.789.101
-              </p>
+              </p> */}
               <a href="" className="mt-4 flex gap-2 max-md:order-1 md:ml-auto">
                 <img
                   src="/icons/x.png"
@@ -39,8 +39,8 @@ export default function Footer() {
                 />
                 furgroove.bsky.social
               </a>
-            </section>
-          </section>
+            </div>
+          </div>
         </div>
       </footer>
     </Reveal>

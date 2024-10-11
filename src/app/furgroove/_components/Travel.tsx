@@ -5,16 +5,22 @@ export default function Travel() {
     <Reveal>
       <h2 className="text-yellow">Travel</h2>
       <div className="mt-4 flex w-full flex-col gap-4">
-        <section className="flex flex-grow flex-col gap-4 sm:flex-row">
-          <img
-            src="/event/map.webp"
-            alt="Map of the Event Location"
-            width={256}
-            height={256}
-            loading="lazy"
-            className="rounded shadow-md sm:w-1/3 w-full"
-          />
-          <div
+        <div className="flex flex-grow flex-col gap-4 sm:flex-row">
+          <a
+            href="https://www.google.com/maps/place/Four+Seasons:+Food,+drinks+%26+fun/@52.1396611,5.4197851,17z/data=!4m15!1m8!3m7!1s0x47c645cfadfcc98b:0x65893caf1f4e289!2sKastanjelaan,+3833+AN+Leusden,+Netherlands!3b1!8m2!3d52.1392663!4d5.4210783!16s%2Fg%2F1v1vcd4f!3m5!1s0x47c6450965046305:0x81233670f92dcf7d!8m2!3d52.1401034!4d5.4215753!16s%2Fg%2F11jkbp5n0k?entry=ttu&g_ep=EgoyMDI0MTAwNy4xIKXMDSoASAFQAw%3D%3D"
+            className="rounded shadow-md sm:w-1/3 w-full overflow-hidden hover:cursor-alias bg-primary-800/50 flex justify-center items-center sm:p-4 md:p-0"
+            target="_blank"
+          >
+            <img
+              src="/event/map.webp"
+              alt="Map of the Event Location"
+              width={256}
+              height={256}
+              loading="lazy"
+              className="max-sm:w-full hover:scale-105 transition-transform duration-200  md:w-full aspect-square rounded-inner"
+            />
+          </a>
+          <section
             className="flex flex-col rounded bg-primary-800/50 p-4 shadow-md sm:w-2/3"
             tabIndex={0}
           >
@@ -33,10 +39,10 @@ export default function Travel() {
                 transport and hotels down below.
               </p>
             </article>
-          </div>
-        </section>
-        <section className="flex flex-grow flex-col gap-4 sm:flex-row">
-          <div
+          </section>
+        </div>
+        <div className="flex flex-grow flex-col gap-4 sm:flex-row">
+          <section
             className="flex flex-col rounded bg-primary-800/50 p-4 shadow-md max-sm:order-2 sm:w-2/3"
             tabIndex={0}
           >
@@ -44,17 +50,18 @@ export default function Travel() {
             <article className="my-auto pb-10">
               <p>
                 At the event location we have space for 60 vehicles, in the
-                surrounding area you are sure to find mroe available parking
-                with large parking garages nearby!
+                surrounding area you are sure to find more available parking
+                nearby!
               </p>
               <br />
               <p>
-                From Amerfoort Centraal you can take bus no. 17 or bus no. 80 to
-                Groene Zoom, from here the event location is a short ~10min walk
-                away.
+                From Amerfoort Centraal you can take bus no. 17 to
+                Plesmanstraat, from here the event location is a short ~7min
+                walk away. If you are staying at the VanderValk hotel it is a
+                ~10min walk to FurGroove.
               </p>
             </article>
-          </div>
+          </section>
           <div
             className="flex flex-col rounded bg-primary-800/50 p-4 shadow-md sm:w-1/3"
             tabIndex={0}
@@ -73,11 +80,11 @@ export default function Travel() {
                 width={256}
                 height={256}
                 loading="lazy"
-                className="mt-2 w-full rounded-inner"
+                className="mt-2 w-full rounded-inner hover:scale-105 transition-transform duration-200"
               />
             </a>
           </div>
-        </section>
+        </div>
       </div>
     </Reveal>
   );

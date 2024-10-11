@@ -1,6 +1,5 @@
 "use client";
 
-import { SubmitContact } from "@/actions/contact";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -17,6 +16,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
 import Reveal from "./Reveal";
 
 export const formSchema = z.object({
@@ -31,6 +31,7 @@ export const formSchema = z.object({
 
 export default function Contact() {
   const [formSent, setFormSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const placeholders = [
     "Hunter",
     "Beatbird",
@@ -50,13 +51,35 @@ export default function Contact() {
     },
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    form.setValue("name", e.target.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    form.setValue("name", event.target.value);
     form.trigger("name");
   };
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // SubmitContact(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setError(null);
+
+    try {
+      emailjs
+        .send(
+          process.env.EMAILJS_SERVICE_ID!,
+          process.env.EMAILJS_TEMPLATE_ID!,
+          values,
+          {
+            publicKey: process.env.EMAILJS_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            console.log("Email sent.");
+          },
+          (error) => {
+            setError(error.message);
+          }
+        );
+    } catch (error: any) {
+      setError(error.message);
+    }
     form.reset();
     setFormSent(true);
   }
@@ -66,8 +89,16 @@ export default function Contact() {
       {formSent ? (
         <div className="flex h-full w-full flex-col gap-2 rounded bg-primary-800/50 p-4 pb-8 shadow-md">
           <h2 className="text-yellow">Contact Us?</h2>
-          <h3 className="text-lg">Your Message has been sent!</h3>
-          <p>Someone on the team will get back to you as soon as they can!</p>
+          {error ? (
+            <h3>{error}</h3>
+          ) : (
+            <>
+              <h3 className="text-lg">Your Message has been sent!</h3>
+              <p>
+                Someone on the team will get back to you as soon as they can!
+              </p>
+            </>
+          )}
         </div>
       ) : (
         <Form {...form}>
