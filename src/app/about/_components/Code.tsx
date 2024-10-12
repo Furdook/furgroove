@@ -79,41 +79,30 @@ export default function Code() {
           );
         })}
       </ul>
-      {
-        /**
-         * Renders an accordion with the title and content of the terms of service
-         */
-        tos.map((item, index) => {
-          return (
-            <AccordionItem value={index.toString()} key={index}>
-              <AccordionTrigger className="text-lg">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent className="leading-8">
-                {
-                  /**
-                   * If the content is a string, it will be rendered as a paragraph.
-                   * If it is an array, it will be rendered as a list of bullet points
-                   */
-                  typeof item.content === "string" ? (
-                    <p className="leading-8">{item.content}</p>
-                  ) : (
-                    <ul className="pl-6 text-pink">
-                      {item.content.map((bulletPoint, index) => {
-                        return (
-                          <li key={index} className="list-disc pt-2">
-                            <p className="text-accent-300">{bulletPoint}</p>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  )
-                }
-              </AccordionContent>
-            </AccordionItem>
-          );
-        })
-      }
+      {tos.map((item, index) => {
+        return (
+          <AccordionItem value={index.toString()} key={index}>
+            <AccordionTrigger className="text-lg">
+              {item.title}
+            </AccordionTrigger>
+            <AccordionContent className="leading-8">
+              {typeof item.content === "string" ? (
+                <p className="leading-8">{item.content}</p>
+              ) : (
+                <ul className="pl-6 text-pink">
+                  {item.content.map((bulletPoint, index) => {
+                    return (
+                      <li key={index} className="list-disc pt-2">
+                        <p className="text-accent-300">{bulletPoint}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        );
+      })}
     </Accordion>
   );
 }
