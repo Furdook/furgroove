@@ -23,6 +23,6 @@ Serves information about upcoming events with their own respective pages. Includ
 ### Deployment
 
 1. Run `npm run build` to build the project
-2. Run `npm run start` to start the production server
+2. Run `npx serve@latest out` to start the production server
 
    (Project is configured to output an uploadable static site in the `out` directory)
