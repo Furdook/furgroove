@@ -51,7 +51,7 @@ export default function Home() {
   );
 }
 
-import { Image } from "lucide-react";
+//import { Image } from "lucide-react";
 
 function Card({
   archivedEvent,
@@ -96,16 +96,16 @@ function Card({
         })}
       </div>
       <div className="flex gap-4">
-        <p className="mt-auto flex gap-2 text-lg text-primary-300/60">
+        <p className="mt-auto flex gap-2  text-primary-300/60">
           {archivedEvent.location}
         </p>
-        <a
+        {/* <a
           href={archivedEvent.gallery}
           className="path ml-auto flex gap-2 rounded-inner bg-primary-800/50 px-4 py-1.5 transition-colors duration-200 hover:bg-primary-800 hover:shadow-xl"
         >
           <Image size={20} className="mt-0.5" />
           Picture Gallery
-        </a>
+        </a> */}
       </div>
     </motion.section>
   );

@@ -15,6 +15,7 @@ export default function Home() {
           <img
             src="/backdrop.webp"
             role="presentation"
+            alt=""
             className="object-center object-cover w-full"
           />
           <img

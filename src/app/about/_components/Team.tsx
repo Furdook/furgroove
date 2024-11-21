@@ -20,7 +20,7 @@ const data = [
   },
   {
     title: "Mai Tai",
-    description: "Web Developer",
+    description: "Web & Socials",
     src: "/furries/mai.webp",
   },
   {
@@ -30,7 +30,7 @@ const data = [
   },
   {
     title: "Menos",
-    description: "Social Media & Security",
+    description: "Security",
     src: "/furries/menos.webp",
   },
   {
