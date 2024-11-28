@@ -45,7 +45,7 @@ export default function Footer() {
               </a>
               <a
                 target="_blank"
-                href="https://bsky.app/profile/furgroove.bsky.social"
+                href="https://bsky.app/profile/furgroove.club"
                 className="flex gap-2 max-md:order-1 md:mt-4"
               >
                 <img
@@ -55,7 +55,7 @@ export default function Footer() {
                   height={24}
                   className="rounded-inner max-md:order-2"
                 />
-                furgroove.bsky.social
+                furgroove.club
               </a>
             </div>
           </div>
