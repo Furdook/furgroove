@@ -1,7 +1,7 @@
 export default function Announcement() {
   return (
     <section className="flex w-full flex-col rounded rounded-b-inner bg-pink p-4 shadow-mds">
-      <h2 className="text-primary-900 font-semibold">FurGroove: 2. Edition</h2>
+      <h2 className="text-primary-900 font-semibold">FurGroove: Summer Edition</h2>
       <p className="text-primary-900 pb-6 pt-2">
         Tickets are now live for the second edition of FurGroove!
       </p>

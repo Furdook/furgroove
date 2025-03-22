@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Breadcrumb currentPage="FurGroove" />
+      <Breadcrumb currentPage="FurGroove: Summer Edition" />
       <Reveal>
         <div className="flex h-[calc(100svh-8rem)] relative">
           <img

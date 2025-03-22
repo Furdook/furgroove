@@ -19,10 +19,10 @@ const eventsList: IEvent[] = [
       "Come join us to a place where you can be yourself! FurGroove AD edition welcomes not only furries but also puppies, gearheads and everyone with an open mind. Together with Fort33 we want to celebrate life and have an awesome tailwagging night with purrfect DJ's and atmosphere!",
   },
   {
-    name: "FurGroove",
+    name: "FurGroove: Summer",
     location: "Leusden",
-    date: "January 25th 2025",
-    path: "/furgroove",
+    date: "July 12th 2025",
+    path: "/summer-edition-2025",
     colour: "pink",
     description:
       "The party starts at 20:00 and will keep you busy for 6 full hours. We got our own DJ's, known from Summerbo.at and several cons all over Europe. They will play all kinds of styles so always something for you! Feeling like chilling a bit after dancing? Go cool down outside with a drink and snack!",

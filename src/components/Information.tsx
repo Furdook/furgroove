@@ -1,11 +1,11 @@
-import Announcement from "./Announcement";
+// import Announcement from "./Announcement";
 import Reveal from "./Reveal";
 
 export default function Information() {
   return (
     <Reveal>
-      <Announcement />
-      <section className="flex mt-2  rounded-t-inner relative w-full flex-col gap-4 rounded bg-primary-800/50 p-4 pb-8 shadow-md">
+      {/* <Announcement /> */}
+      <section className="flex mt-2 relative w-full flex-col gap-4 rounded bg-primary-800/50 p-4 pb-8 shadow-md">
         <h1 className="text-pink">FurGroove</h1>
         <p>
           Welcome to Furgroove. Events made by furries for furries. We host

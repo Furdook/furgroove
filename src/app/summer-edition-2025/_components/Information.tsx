@@ -13,8 +13,8 @@ export default function Information() {
           alt="FurGroove art"
         />
         <div className="z-10 h-full max-md:bg-primary-900/50 max-md:p-4 max-md:backdrop-blur">
-          <h1 className="text-pink">FurGroove</h1>
-          <h2 className="mb-6 text-xl text-primary-300/85">25th of January</h2>
+          <h1 className="text-pink">FurGroove: Summer Edition</h1>
+          <h2 className="mb-6 text-xl text-primary-300/85">12th of July</h2>
           <p className="pb-10">
             After the great success of FurGroove and FurGroove: Sets Sail,
             <br />
