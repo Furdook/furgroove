@@ -1,5 +1,6 @@
 import { Breadcrumb } from '@/components/ui/breadcrumb.tsx'
 import { HomeIcon } from 'lucide-react'
+import Galleries from '@/components/gallery/galleries.tsx'
 
 export default function Gallery() {
   return (
@@ -18,6 +19,9 @@ export default function Gallery() {
           </Breadcrumb.Item>
         </Breadcrumb.List>
       </Breadcrumb>
+      <main className="flex flex-col gap-12 pb-4">
+        <Galleries />
+      </main>
     </>
   )
 }

@@ -44,7 +44,11 @@ export default function Travel() {
           <Card.Title>Nearby Hotels</Card.Title>
           <Card.Content className="flex flex-col gap-2">
             <h3 className="text-xl opacity-50">Van Der Valk Hotel</h3>
-            <img src="/images/event/vanderwalk.webp" className="aspect-square rounded-md" alt="Van der Valk hotel room" />
+            <img
+              src="/images/event/vanderwalk.webp"
+              className="aspect-square rounded-md"
+              alt="Van der Valk hotel room"
+            />
           </Card.Content>
         </Card>
       </div>

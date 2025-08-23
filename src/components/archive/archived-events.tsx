@@ -5,7 +5,7 @@ import { ColorHelper } from '@/lib/color-helper.ts'
 export function Archives({ children }: React.PropsWithChildren) {
   return (
     <section className="flex flex-col gap-4 max-md:pt-6">
-      <h2 className="text-accent-pink p-2 text-2xl uppercase md:p-4">Archive</h2>
+      <h2 className="text-accent-pink p-2 text-2xl uppercase md:p-4 md:pb-0">Archive</h2>
       {children}
     </section>
   )
