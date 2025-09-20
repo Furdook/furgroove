@@ -2,6 +2,21 @@ import type { ItemProps } from '@/components/gallery/item.tsx'
 
 export const galleryItems: ItemProps[] = [
   {
+    image: '/images/gallery/dance.webp',
+    title: 'Dance floor rollup',
+    artist: 'Nlorier',
+  },
+  {
+    image: '/images/gallery/lounge.webp',
+    title: 'Lounge rollup',
+    artist: 'Aviverine',
+  },
+  {
+    image: '/images/gallery/summer.webp',
+    title: 'Summer banner',
+    artist: 'Thlylii',
+  },
+  {
     image: '/images/gallery/badge.webp',
     title: 'Badge design',
     artist: 'Aviverine',

@@ -8,7 +8,7 @@ import Travel from '@/components/event/travel.tsx'
 import Tickets from '@/components/event/tickets.tsx'
 import Artists from '@/components/event/artists.tsx'
 
-export default function SummerEdition2025() {
+export default function JanuaryEdition2026() {
   return (
     <>
       <Breadcrumb className="absolute z-10">
@@ -23,7 +23,7 @@ export default function SummerEdition2025() {
           <Breadcrumb.Ellipsis />
           <Breadcrumb.Separator />
           <Breadcrumb.Item>
-            <Breadcrumb.Page>Summer Edition 2025</Breadcrumb.Page>
+            <Breadcrumb.Page>FurGroove 3 - January 2026</Breadcrumb.Page>
           </Breadcrumb.Item>
         </Breadcrumb.List>
       </Breadcrumb>

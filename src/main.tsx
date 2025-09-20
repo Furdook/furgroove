@@ -11,7 +11,6 @@ import CodeOfConduct from '@/pages/about/code-of-conduct.tsx'
 import Archive from '@/pages/archive'
 import NotFound from '@/pages/not-found'
 import JanuaryEdition2026 from '@/pages/event/january-edition-2026.tsx'
-import SummerEdition2025 from '@/pages/event/summer-edition-2025.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -28,7 +27,6 @@ createRoot(document.getElementById('root')!).render(
           </Route>
 
           <Route path="event">
-            <Route path="summer-edition-2025" element={<SummerEdition2025 />} />
             <Route path="january-edition-2026" element={<JanuaryEdition2026 />} />
           </Route>
 

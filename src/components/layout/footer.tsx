@@ -1,4 +1,6 @@
 import Logo from '/vectors/logo.svg'
+import TwitterIcon from '@/components/assets/twitter-icon.tsx'
+import BlueskyIcon from '@/components/assets/bluesky-icon.tsx'
 
 export default function Footer() {
   return (
@@ -15,7 +17,25 @@ export default function Footer() {
             Telegram Channel
           </a>
         </li>
-        <p className="mt-4 opacity-50">kvk.no: 95840346</p>
+        <div className="flex flex-col sm:flex-row sm:gap-4 mt-4">
+          <p className="opacity-50 max-sm:order-3 max-sm:mt-4">kvk.no: 95840346</p>
+          <a
+            href="https://x.com/furgrooveNL"
+            target="_blank"
+            rel="noreferrer"
+            className="sm:ml-auto hover:underline decoration-accent-pink flex gap-1 items-center"
+          >
+            <TwitterIcon /> FurGrooveNL
+          </a>
+          <a
+            href="https://bsky.app/profile/furgroove.club"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline decoration-accent-pink flex gap-1 items-center"
+          >
+            <BlueskyIcon /> furgroove.club
+          </a>
+        </div>
       </ul>
     </footer>
   )
