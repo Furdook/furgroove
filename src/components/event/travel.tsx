@@ -16,12 +16,13 @@ export default function Travel() {
           <Card.Title>Four Seasons Leusden</Card.Title>
           <Card.Content className="my-auto flex flex-col gap-6">
             <p>
-              Join us in our new location at the Four Seasons Leusden. With a spectacular indoor
-              bar, plenty of room to dance and a cozy outdoor section we are sure to level up the
-              Furgroove experience.
+              Join us once again at Club Four Seasons in Leusden, the perfect spot for dancing,
+              drinks, and great vibes! With a spacious dance floor, a fully stocked indoor bar, and
+              a cozy outdoor area to chill and chat, it’s everything you love about FurGroove —
+              turned up a notch.
             </p>
             <p>
-              ALocated at Kastanjelaan 1 in Leusden only a short distance from the A28 highway. Find
+              Located at Kastanjelaan 1 in Leusden, only a short distance from the A28 highway. Find
               more information about parking, public transport and hotels down below.
             </p>
           </Card.Content>

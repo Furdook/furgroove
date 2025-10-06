@@ -17,4 +17,8 @@ export const navigationItems: NavigationItem[] = [
     content: 'Archive',
     href: '/archive',
   },
+  {
+    content: 'Store',
+    href: 'https://store.furgroove.club/',
+  },
 ]

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router'
 function Events({ children }: React.PropsWithChildren) {
   return (
     <section className="flex flex-col gap-4 md:gap-12 md:p-4">
-      <h2 className="text-accent-blue text-2xl uppercase max-md:pl-4">Events</h2>
+      <h2 className="text-accent-yellow text-2xl uppercase max-md:pl-4">Events</h2>
       {children}
     </section>
   )

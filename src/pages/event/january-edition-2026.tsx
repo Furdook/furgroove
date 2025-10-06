@@ -27,24 +27,22 @@ export default function JanuaryEdition2026() {
           </Breadcrumb.Item>
         </Breadcrumb.List>
       </Breadcrumb>
-
       <main className="relative mb-4 flex flex-col gap-16 max-md:pt-14">
         <Header />
         <Card className="flex flex-col gap-2 p-4">
-          <Card.Title color={ColorHelper.Pink}>FurGroove: Summer Edition</Card.Title>
+          <Card.Title color={ColorHelper.Pink}>FurGroove 3</Card.Title>
           <Card.Content>
-            <h3 className="text-primary-50/80 -mt-2 mb-4 text-xl">12th of July 2025</h3>
+            <h3 className="text-primary-50/80 -mt-2 mb-4 text-xl">24th of January 2026</h3>
             <p>
-              After the smashing success of FurGroove earlier this year, it’s time to soak up the
-              sun and feel the summer magic at FurGroove Summer! Get ready to dance the night away
-              on our vibrant and spacious dance floor as our amazing DJs spin the hottest summer
-              beats at the stunning Four Seasons Leusden. Need to cool off? Take a dip in our
-              outdoor dipping pool or sip on refreshing cocktails while enjoying the warm summer
-              breeze. This is the ultimate summer party—you don’t want to miss it!
+              Get ready for the third edition of FurGroove, once again lighting up Club Four Seasons
+              in Leusden! Expect chill drinks, a warm crowd, and beats that’ll keep you dancing all
+              night long. For our fursuiters, the Oasis will be open again — the perfect spot to
+              refresh, suit up, and fluff out! And if you need to cool down, the outdoor area will
+              be open too. This is the furry party of the season — good vibes, great music, and the
+              best community around. Don’t miss it!
             </p>
           </Card.Content>
         </Card>
-
         <Venue />
         <Travel />
         <Tickets />

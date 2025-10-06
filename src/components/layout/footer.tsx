@@ -1,6 +1,7 @@
 import Logo from '/vectors/logo.svg'
 import TwitterIcon from '@/components/assets/twitter-icon.tsx'
 import BlueskyIcon from '@/components/assets/bluesky-icon.tsx'
+import { NavLink } from 'react-router'
 
 export default function Footer() {
   return (
@@ -16,6 +17,9 @@ export default function Footer() {
           <a href="https://t.me/furgrooveinfo" target="_blank" rel="noreferrer">
             Telegram Channel
           </a>
+        </li>
+        <li>
+          <NavLink to="/about/code-of-conduct">Code of Conduct</NavLink>
         </li>
         <div className="flex flex-col sm:flex-row sm:gap-4 mt-4">
           <p className="opacity-50 max-sm:order-3 max-sm:mt-4">kvk.no: 95840346</p>

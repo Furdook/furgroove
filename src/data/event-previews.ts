@@ -6,7 +6,8 @@ export const eventPreviews: EventProps[] = [
     title: 'FurGroove 3',
     date: 'January 5th 2024',
     content:
-      'Get ready for the ultimate summer party! The fun kicks off at 20:00 and keeps the energy high for six unforgettable hours. Our resident and new DJs, known from FurGroove, Eurofurence and several cons across Europe, will be spinning the hottest summer tunes—all styles, all vibes, all night long! Need a breather? Step outside, feel the warm summer breeze, and cool down with a refreshing drink and tasty snacks.',
+      'FurGroove is back this winter! Club Four ‘Wonderland’ Seasons in Leusden is once again our venue.\n' +
+      'With a nice dancefloor, delicious drinks and enough chill areas you can entertain yourselves from 20:00 till 02:00u. Our DJ’s will play the latest tunes and best hits. Of course we also make sure that fursuiting is not a hassle with our own Fursuit Oasis.',
     link: '/event/january-edition-2026',
     color: ColorHelper.Pink,
   },

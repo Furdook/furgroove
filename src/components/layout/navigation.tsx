@@ -4,6 +4,7 @@ import { navigationItems } from '@/data/navigation-items.ts'
 import { Button } from '@/components/ui/button.tsx'
 import { useState } from 'react'
 import { AlignJustify, X } from 'lucide-react'
+import { cn } from '@/lib/utils.ts'
 
 export default function Navigation() {
   const [navigationOpen, setNavigationOpen] = useState(false)
@@ -76,7 +77,11 @@ function NavigationItem({ content, href, onClick }: NavigationItem) {
       key={href}
       className="hover:bg-primary-700/50 w-fit rounded-lg px-4 py-2 transition-colors"
     >
-      <NavLink to={href} className="text-xl">
+      <NavLink
+        to={href}
+        target={content == 'Store' ? '_blank' : ''}
+        className={cn('text-xl', !href.startsWith('/') && 'cursor-alias')}
+      >
         {content}
       </NavLink>
     </li>

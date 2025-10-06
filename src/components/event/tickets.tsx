@@ -50,7 +50,7 @@ export default function Tickets() {
 const tickets = [
   {
     title: 'Early bird',
-    price: 15,
+    price: 20,
     src: '/branding/icon_pink.webp',
   },
   {
@@ -60,7 +60,7 @@ const tickets = [
   },
   {
     title: 'Late bird',
-    price: 50,
+    price: 30,
     src: '/branding/icon_yellow.webp',
   },
 ]
