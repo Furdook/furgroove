@@ -1,4 +1,10 @@
+import { cn } from '@/lib/utils.ts'
+
 export default function Tickets() {
+  const currentDate = new Date()
+  const regDate = new Date(2025, 9, 25, 20)
+  const ticketsDisabled = currentDate <= regDate
+
   const renderTicket = (ticket: { title: string; src: string; price: number }) => {
     return (
       <div className="flex w-full flex-col gap-1 sm:max-w-32 sm:first-of-type:ml-auto">
@@ -27,7 +33,10 @@ export default function Tickets() {
             target="_blank"
             href="https://eventix.shop/83fg7sdc"
             rel="noreferrer"
-            className="bg-accent-pink text-primary-900 hidden max-w-96 rounded-md px-2.5 py-2 text-center sm:block"
+            className={cn(
+              'bg-accent-pink text-primary-900 hidden max-w-96 rounded-md px-2.5 py-2 text-center sm:block',
+              ticketsDisabled && 'bg-accent-pink/50 cursor-not-allowed pointer-events-none'
+            )}
           >
             Purchase ticket
           </a>
@@ -38,7 +47,10 @@ export default function Tickets() {
           target="_blank"
           href="https://eventix.shop/83fg7sdc"
           rel="noreferrer"
-          className="bg-accent-pink text-primary-900 block rounded-md px-2.5 py-2 text-center sm:hidden"
+          className={cn(
+            'bg-accent-pink text-primary-900 block rounded-md px-2.5 py-2 text-center sm:hidden',
+            ticketsDisabled && 'bg-accent-pink/50 cursor-not-allowed pointer-events-none'
+          )}
         >
           Purchase ticket
         </a>
