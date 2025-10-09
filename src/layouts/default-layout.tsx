@@ -1,21 +1,20 @@
-import { Outlet, useLocation } from 'react-router'
-
-import Navigation from '@/components/layout/navigation.tsx'
-import Footer from '@/components/layout/footer.tsx'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect } from "react";
+import { Outlet, useLocation } from "react-router";
+import Footer from "@/components/layout/footer.tsx";
+import Navigation from "@/components/layout/navigation.tsx";
 
 export default function DefaultLayout() {
-  const location = useLocation()
+	const location = useLocation();
 
-  useLayoutEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [location.pathname])
+	useLayoutEffect(() => {
+		window.scrollTo({ top: 0, behavior: "instant" });
+	}, [location.pathname]);
 
-  return (
-    <>
-      <Navigation />
-      <Outlet />
-      <Footer />
-    </>
-  )
+	return (
+		<>
+			<Navigation />
+			<Outlet />
+			<Footer />
+		</>
+	);
 }

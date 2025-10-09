@@ -1,56 +1,56 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
-  --breakpoint-lg: 960px;
+	--breakpoint-lg: 960px;
 
-  --color-primary-50: hsl(265, 70%, 92%);
-  --color-primary-100: hsl(264, 65%, 82%);
-  --color-primary-200: hsl(261, 60%, 72%);
-  --color-primary-300: hsl(260, 55%, 62%);
-  --color-primary-400: hsl(259, 50%, 52%);
-  --color-primary-500: hsl(260, 45%, 42%);
-  --color-primary-600: hsl(261, 40%, 32%);
-  --color-primary-700: hsl(264, 35%, 22%);
-  --color-primary-800: hsl(267, 30%, 12%);
-  --color-primary-900: hsl(272, 25%, 5%);
-  --color-primary-950: hsl(277, 20%, 5%);
+	--color-primary-50: hsl(265, 70%, 92%);
+	--color-primary-100: hsl(264, 65%, 82%);
+	--color-primary-200: hsl(261, 60%, 72%);
+	--color-primary-300: hsl(260, 55%, 62%);
+	--color-primary-400: hsl(259, 50%, 52%);
+	--color-primary-500: hsl(260, 45%, 42%);
+	--color-primary-600: hsl(261, 40%, 32%);
+	--color-primary-700: hsl(264, 35%, 22%);
+	--color-primary-800: hsl(267, 30%, 12%);
+	--color-primary-900: hsl(272, 25%, 5%);
+	--color-primary-950: hsl(277, 20%, 5%);
 
-  --color-accent-pink: #ff369b;
-  --color-accent-yellow: #fceb72;
-  --color-accent-blue: #16ffec;
+	--color-accent-pink: #ff369b;
+	--color-accent-yellow: #fceb72;
+	--color-accent-blue: #16ffec;
 
-  --shadow-md: 6px 4px 8px -4px var(--color-primary-900);
+	--shadow-md: 6px 4px 8px -4px var(--color-primary-900);
 }
 
 @layer base {
-  body {
-    @apply bg-primary-800 text-primary-50 mx-2 max-w-screen-lg lg:mx-auto;
-  }
+	body {
+		@apply bg-primary-800 text-primary-50 mx-2 max-w-screen-lg lg:mx-auto;
+	}
 
-  p,
-  li {
-    @apply max-w-3xl leading-normal tracking-wider [word-spacing:0.1rem];
-  }
+	p,
+	li {
+		@apply max-w-3xl leading-normal tracking-wider [word-spacing:0.1rem];
+	}
 }
 
 @layer components {
-  .card {
-    @apply bg-primary-700/25 overflow-hidden rounded-xl backdrop-blur-md md:rounded-2xl;
-  }
-  .border-effect {
-    @apply border-t-primary-100/10 border-l-primary-100/10 ring-primary-700/20 border-t border-l shadow-md ring;
-  }
+	.card {
+		@apply bg-primary-700/25 overflow-hidden rounded-xl backdrop-blur-md md:rounded-2xl;
+	}
+	.border-effect {
+		@apply border-t-primary-100/10 border-l-primary-100/10 ring-primary-700/20 border-t border-l shadow-md ring;
+	}
 }
 
 .list-paw > li {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .list-paw > li::before {
-  content: url('/public/vectors/paw.svg');
-  height: 0.85rem;
-  width: 0.85rem;
-  position: absolute;
-  left: 1rem;
+	content: url("/public/vectors/paw.svg");
+	height: 0.85rem;
+	width: 0.85rem;
+	position: absolute;
+	left: 0.25rem;
 }
