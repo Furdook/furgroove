@@ -12,12 +12,20 @@ export const eventPreviews: EventProps[] = [
 		color: ColorHelper.Pink,
 	},
 	{
-		title: "FurGroove 4",
+		title: "FurGroove Socials",
+		date: "Recurring",
+		content:
+			"After the high-energy dance parties, we’re pressing pause for a chill afternoon to catch up with friends, old and new. Join us in the heart of Utrecht for a laid-back social gathering at Café Joost/Bar Josefien—no dancefloor required! Once every 3 months we open up the bar for all furries in the Netherlands.",
+		link: "/event/social-events",
+		color: ColorHelper.Blue,
+	},
+	{
+		title: "FurGroove",
 		date: "TBD",
 		content:
 			"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		link: "",
-		color: ColorHelper.Blue,
+		color: ColorHelper.Yellow,
 		teaser: true,
 	},
 ];

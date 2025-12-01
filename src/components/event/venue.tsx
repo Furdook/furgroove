@@ -1,12 +1,18 @@
-import { Carousel } from "@/components/ui/carousel.tsx";
-import { venueCarousel } from "@/data/venue-carousel.ts";
+import {
+	Carousel,
+	type CarouselSlideProps,
+} from "@/components/ui/carousel.tsx";
 
-export default function Venue() {
+interface VenueProps {
+	carousel: CarouselSlideProps[];
+}
+
+export default function Venue({ carousel }: VenueProps) {
 	return (
 		<section className="flex flex-col gap-2">
 			<h2 className="text-accent-blue p-4 text-2xl uppercase">Venue</h2>
 			<Carousel>
-				{venueCarousel.map((slide) => {
+				{carousel.map((slide) => {
 					return <Carousel.Slide {...slide} key={slide.title} />;
 				})}
 			</Carousel>

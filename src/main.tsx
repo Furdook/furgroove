@@ -9,6 +9,7 @@ import About from "@/pages/about";
 import CodeOfConduct from "@/pages/about/code-of-conduct.tsx";
 import Archive from "@/pages/archive";
 import JanuaryEdition2026 from "@/pages/event/january-edition-2026.tsx";
+import SocialEvents from "@/pages/event/social-events.tsx";
 import Gallery from "@/pages/gallery";
 import NotFound from "@/pages/not-found";
 
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")!).render(
 							path="january-edition-2026"
 							element={<JanuaryEdition2026 />}
 						/>
+						<Route path="social-events" element={<SocialEvents />} />
 					</Route>
 					<Route path="archive">
 						<Route index element={<Archive />} />
